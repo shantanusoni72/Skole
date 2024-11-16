@@ -1,0 +1,40 @@
+.action {
+    padding: 20px;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.action-box {
+    border: 1px solid var(--grey);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 20vw;
+    box-shadow: 7px 7px var(--grey-light);
+    text-decoration: none;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.action-box:hover {
+    box-shadow: 7px 7px var(--blue);
+}
+
+.action-box img {
+    width: 4vw;
+}
+
+.action-box h2 {
+    font-size: var(--h2);
+    font-weight: calc(var(--fw) + 100);
+    color: var(--blue);
+}
+
+.action-box p {
+    font-size: var(--h3);
+    font-weight: calc(var(--fw) + 100);
+    color: var(--orange);
+}

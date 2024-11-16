@@ -1,0 +1,56 @@
+.hero {
+    background-image: url('../../../assets/hero.jpg');
+    padding: 20px;
+    padding-bottom: 0px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: end;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* mask: var(--mask); */
+}
+
+.dots {
+    position: absolute;
+}
+
+.hero-box {
+    width: 70vw;
+    height: 80vh;
+    background-image: url('../../../assets/slider-bg-floral.webp');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding-block: 30px;
+}
+
+.hero-box h2 {
+    font-size: calc(var(--h1) + 20px);
+    font-weight: calc(var(--fw) + 100);
+    color: var(--blue);
+    text-align: center;
+    line-height: 60px;
+}
+
+.hero-box span {
+    font-size: calc(var(--h1) + 50px);
+    font-weight: calc(var(--fw) + 100);
+    color: var(--blue);
+    text-align: center;
+}
+
+.hero-people {
+    width: 30vw;
+    height: 30vh;
+    background-image: url('../../../assets/people-button.webp');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
