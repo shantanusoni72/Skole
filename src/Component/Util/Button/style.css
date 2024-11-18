@@ -1,24 +1,30 @@
 .button {
     background-color: var(--orange);
-    padding: 10px;
+    padding-inline: 20px;
+    padding-block: 7px;
     border-radius: 5px;
     cursor: pointer;
     z-index: 4;
     border: 0px;
-}
-
-.button:hover {
-    background-color: var(--black);
-    transform: scale(1.05);
-    transition: 0.4s;
-}
-
-.button a {
     font-family: var(--ff-secondary);
     color: var(--white);
     text-decoration: none;
 }
 
-.button a.bordered {
-    
+.button:hover {
+    background-color: var(--black);
+    transform: scale(1.09);
+    transition: 0.4s;
+}
+
+.button.bordered {
+    background-color: var(--white);
+    border: 1px solid var(--orange);
+    color: var(--orange);
+}
+
+.button.bordered:hover {
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    color: var(--white);
 }

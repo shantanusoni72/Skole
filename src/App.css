@@ -14,17 +14,27 @@
     --fw: 700;
     --orange: #E74C25;
     --blue: #0A303A;
+    --blue-green: #167287;
     --purple: #6572AE;
     --green: #38BC83;
     --gold: #A79201;
+    --gold-light: #F4F1EA;
     --blue-light: #11A5E4;
     --white: #FFFFFF;
     --black: #000000;
     --grey: #6b6b6b;
-    --grey-light: #e2e2e2;
+    --grey-light: #EDEDED;
     --mask:
-        radial-gradient(38.42px at 50% calc(100% - 54px), #000 99%, #0000 101%) calc(50% - 60px) 0/120px 100%,
-        radial-gradient(38.42px at 50% calc(100% + 24px), #0000 99%, #000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
+        radial-gradient(39.6px at 50% calc(100% - 56px), #000 99%, #0000 101%) calc(50% - 56px) 0/112px 100%,
+        radial-gradient(39.6px at 50% calc(100% + 28px), #0000 99%, #000 101%) 50% calc(100% - 28px)/112px 100% repeat-x;
+    --box-mask:
+        radial-gradient(32.02px at 50% calc(100% - 45px), #000 99%, #0000 101%) calc(50% - 50px) 0/100px 100%,
+        radial-gradient(32.02px at 50% calc(100% + 20px), #0000 99%, #000 101%) 50% calc(100% - 25px)/100px 100% repeat-x;
+    --news-mask:
+        radial-gradient(33.63px at 50% 47.5px, #000 99%, #0000 101%) calc(50% - 50px) 0/100px 51% repeat-x,
+        radial-gradient(33.63px at 50% -22.5px, #0000 99%, #000 101%) 50% 25px/100px calc(51% - 25px) repeat-x,
+        radial-gradient(33.63px at 50% calc(100% - 47.5px), #000 99%, #0000 101%) calc(50% - 50px) 100%/100px 51% repeat-x,
+        radial-gradient(33.63px at 50% calc(100% + 22.5px), #0000 99%, #000 101%) 50% calc(100% - 25px)/100px calc(51% - 25px) repeat-x;
 }
 
 * {

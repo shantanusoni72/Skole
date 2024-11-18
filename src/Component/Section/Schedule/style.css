@@ -1,0 +1,131 @@
+.schedule {
+    padding-block: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.schedule-row-1 h1 {
+    font-size: calc(var(--h1) + 200px);
+    font-weight: calc(var(--fw));
+    color: var(--blue);
+    font-family: var(--ff-secondary);
+    margin-inline: 100px;
+}
+
+.schedule-row-2 {
+    display: flex;
+    gap: 100px;
+    padding-left: 20vw;
+}
+
+.schedule-row-2-col-2 {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.schedule-row-2-col-2 h1 {
+    font-size: calc(var(--h1) + 15px);
+    font-weight: calc(var(--fw) + 100);
+    color: var(--blue);
+}
+
+.schedule-row-2-col-2 p {
+    font-size: calc(var(--h3));
+    font-weight: calc(var(--fw) - 300);
+    line-height: 25px;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.schedule-row-3 {
+    display: flex;
+    justify-content: center;
+}
+
+.schedule-row-3 img {
+    width: 80%;
+}
+
+.schedule-row-4 {
+    display: flex;
+    gap: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.schedule-row-4 h2 {
+    font-size: calc(var(--h3) + 4px);
+    font-weight: calc(var(--fw) + 100);
+    color: var(--blue);
+    line-height: 25px;
+}
+
+.schedule-row-5 {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .schedule-row-1 h1 {
+        font-size: calc(var(--h1) + 100px);
+        margin-inline: 50px;
+    }
+    
+    .schedule-row-2 {
+        padding-inline: 40px;
+    }
+    
+    .schedule-row-2-col-2 {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .schedule-row-2-col-2 h1 {
+        font-size: calc(var(--h1) + 5px);
+        line-height: 40px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        gap: 5px;
+        align-items: start;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .schedule-row-1 h1 {
+        font-size: calc(var(--h1) + 50px);
+    }
+    
+    .schedule-row-2 {
+        align-items: center;
+        flex-direction: column-reverse;
+        padding-inline: 25px;
+        gap: 30px;
+    }
+
+    .schedule-row-2 img {
+        width: 60%;
+    }
+    
+    .schedule-row-2-col-2 {
+        width: 100%;
+    }
+
+    .schedule-row-4 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}

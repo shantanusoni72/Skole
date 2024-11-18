@@ -1,15 +1,15 @@
 .hero {
     background-image: url('../../../assets/hero.jpg');
-    padding: 20px;
+    padding-inline: 50px;
+    padding-top: 50px;
     padding-bottom: 0px;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
     justify-content: end;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: repeat;
     /* mask: var(--mask); */
 }
 
@@ -18,8 +18,8 @@
 }
 
 .hero-box {
-    width: 70vw;
-    height: 80vh;
+    width: 70%;
+    /* height: 80vh; */
     background-image: url('../../../assets/slider-bg-floral.webp');
     background-size: cover;
     display: flex;
@@ -46,7 +46,7 @@
 
 .hero-people {
     width: 30vw;
-    height: 30vh;
+    /* height: 30vh; */
     background-image: url('../../../assets/people-button.webp');
     background-size: cover;
     display: flex;

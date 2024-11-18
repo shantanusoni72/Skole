@@ -1,0 +1,42 @@
+.intro {
+    display: flex;
+    gap: 20px;
+    align-items: start;
+    padding-inline: 150px;
+    width: 65%;
+}
+
+.intro-col-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro-col-1 h1 {
+    font-size: calc(var(--h1) + 200px);
+    font-weight: calc(var(--fw));
+    font-family: var(--ff-secondary);
+    color: var(--blue);
+    letter-spacing: 10px;
+}
+
+.intro-col-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: end;
+    padding-top: 180px;
+}
+
+.intro-col-2 h2 {
+    font-size: calc(var(--h1) + 15px);
+    font-weight: calc(var(--fw) + 100);
+    color: var(--blue);
+    line-height: 50px;
+}
+
+.intro-col-2 p {
+    font-size: calc(var(--h3) - 0px);
+    font-weight: calc(var(--fw) - 400);
+    color: var(--black);
+}

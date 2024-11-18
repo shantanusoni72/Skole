@@ -1,0 +1,51 @@
+.age-container {
+    display: flex;
+}
+.moo-img {
+    width: 100%;
+}
+
+.age-main-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.age-row-1 {
+    display: flex;
+    justify-content: start;
+    padding-inline: 50px;
+}
+
+.age-row-1 h1 {
+    font-size: calc(var(--h1) + 200px);
+    font-weight: calc(var(--fw) + 300);
+    font-family: var(--ff-secondary);
+    color: var(--blue);
+}
+
+.age-row-2 {
+    display: flex;
+    justify-content: end;
+    padding-inline: 50px;
+}
+
+.age-row-2 h1 {
+    font-size: calc(var(--h1) + 15px);
+    font-weight: calc(var(--fw) + 100);
+    color: var(--blue);
+}
+
+.age-row-3 {
+    display: flex;
+    gap: 5px;
+    justify-content: space-around;
+}
+
+.age-card {
+    width: 25%;
+    border-radius: 40px;
+    padding: 20px;
+    background-color: transparent;
+    background-image: url('../../../assets/age-svg.svg');
+}
