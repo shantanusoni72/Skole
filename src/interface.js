@@ -7,6 +7,16 @@ import News_Img_1 from './assets/news-1.webp';
 import News_Img_2 from './assets/news-2.webp';
 import News_Img_3 from './assets/news-3.webp';
 
+// Intro - Home Page
+export const intro_content = [
+    {
+        'shouted_heading': 'We',
+        'normal_heading': 'are kindergarten and childhood is our passion.',
+        'paragraph': 'We are excited and pleased to introduce you to the wonderful, passionate and committed educators who are working at Skole Learning Centre. Please take a moment to meet “Our Family!” We invited each of them to describe why they love working with children.'
+    }
+]
+
+
 // News - Home Page
 export const news_content = [
     {

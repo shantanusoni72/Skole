@@ -23,6 +23,11 @@
     align-items: end;
 }
 
+.foxy {
+    transform: rotate(0deg);
+    perspective: 120px;
+}
+
 .footer-row-2 {
     display: flex;
     gap: 10px;

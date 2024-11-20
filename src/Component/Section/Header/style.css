@@ -42,13 +42,23 @@
 	}
 }
 
+
+@keyframes openMobileMenuAnimation {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
 .top {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    position: fixed;
+    position: sticky;
     top: 0;
     gap: 0px;
+    z-index: 99;
 }
 
 .header {
@@ -68,6 +78,7 @@
 
 .menuSVG {
     display: none;
+    cursor: pointer;
 }
 
 .header-menu ul {
@@ -135,7 +146,7 @@
 }
 
 .link:hover {
-    color: var(--blue);
+    color: var(--orange);
 }
 
 .horizontal-waves {
@@ -144,13 +155,18 @@
     background-color: var(--white);
 }
 
-#home svg {
-    animation: dotBouncing 1s ease 0s 1 normal forwards;
+.header-menu svg {
+    animation: dotBouncing 0.8s ease 0s 1 normal forwards;
 }
 
 .mobile-menu {
     width: 100%;
     padding-inline: 20px;
+    margin-top: 9vh;
+    position: absolute;
+    background-color: var(--white);
+    animation: openMobileMenuAnimation 0.4s;
+    transform-origin: top;
 }
 
 .mobile-menu.hidden {
@@ -176,6 +192,16 @@
     text-decoration: none;
 }
 
+@media screen and (max-width: 1200px) {
+    .header-menu {
+        display: none;
+    }
+
+    .menuSVG {
+        display: block;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .header {
         padding: 25px;
@@ -197,5 +223,15 @@
 @media screen and (max-width: 440px) {
     .header {
         flex-wrap: wrap;
+    }
+
+    .mobile-menu {
+        width: 100%;
+        padding-inline: 20px;
+        margin-top: 30%;
+        position: absolute;
+        background-color: var(--white);
+        animation: openMobileMenuAnimation 0.4s;
+        transform-origin: top;
     }
 }

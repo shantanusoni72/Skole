@@ -1,5 +1,39 @@
+@keyframes SplashingAnimation {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(-50px, -50px);
+    }
+    50% {
+        transform: translate(50px, 50px);
+    }
+    75% {
+        transform: translate(-50px, -50px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.dots {
+    position: absolute;
+    width: 75%;
+    animation: SplashingAnimation 0.8s;
+}
+
 .hero {
+    width: 100%;
     background-image: url('../../../assets/hero.jpg');
+    height: 100vh;
     padding-inline: 50px;
     padding-top: 50px;
     padding-bottom: 0px;
@@ -10,23 +44,17 @@
     justify-content: end;
     background-size: cover;
     background-repeat: repeat;
-    /* mask: var(--mask); */
-}
-
-.dots {
-    position: absolute;
 }
 
 .hero-box {
     width: 70%;
-    /* height: 80vh; */
+    height: 70vh;
     background-image: url('../../../assets/slider-bg-floral.webp');
     background-size: cover;
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
-    padding-block: 30px;
 }
 
 .hero-box h2 {
@@ -46,7 +74,7 @@
 
 .hero-people {
     width: 30vw;
-    /* height: 30vh; */
+    height: 30vh;
     background-image: url('../../../assets/people-button.webp');
     background-size: cover;
     display: flex;

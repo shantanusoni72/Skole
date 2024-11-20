@@ -1,0 +1,125 @@
+.presentation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-block: 40px;
+}
+
+.presentation-controller ol {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+   counter-reset: item;
+}
+
+.presentation-controller ol li {
+    counter-increment: item;
+}
+
+.presentation-controller ol li a:active {
+    color: var(--blue-light);
+}
+
+.presentation-controller ol li::before {
+    content: counter(item);
+    background-color: var(--blue-green);
+    padding-inline: 15px;
+    padding-block: 7px;
+    border-radius: 50%;
+    mask: url('../../../assets/numbering.svg') no-repeat center;
+    font-family: var(--ff-secondary);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.presentation-controller ol li a {
+    font-size: var(--h3);
+    font-weight: var(--fw);
+    color: var(--blue);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.presentation-controller ol li:focus {
+    color: var(--blue-green);
+}
+
+.presentation-carousel {
+    width: 40vw;
+}
+
+.presentation-carousel.hidden {
+    display: none;
+}
+
+.presentation-slide {
+    width: 100%;
+    mask: url('../../../assets/slider-image.svg');
+}
+
+.react-multiple-carousel__arrow--left {
+    background-color: transparent !important;
+    position: absolute;
+    margin-left: -30px;
+}
+
+.react-multiple-carousel__arrow--left::before {
+    content: "\e825";
+    color: var(--blue-green) !important;
+    font-weight: calc(var(--fw) + 300) !important;
+}
+
+.react-multiple-carousel__arrow--right {
+    background-color: transparent !important;
+}
+
+.react-multiple-carousel__arrow--right::before {
+    content: "\e825";
+    color: var(--blue-green) !important;
+    font-weight: calc(var(--fw) + 300) !important;
+}
+
+.react-multiple-carousel__arrow {
+    z-index: 10 !important;
+}
+
+.presentation-image {
+    display: flex;
+    align-items: end;
+    gap: 20px;
+}
+
+.presentation-image-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0px;
+}
+
+@media screen and (max-width: 1200px) {
+    .presentation-image {
+        display: none;
+    }
+
+    .presentation-carousel {
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .presentation-carousel {
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .presentation {
+        flex-direction: column;
+    }
+
+    .presentation-carousel {
+        width: 90vw;
+        gap: 30px;
+    }
+}

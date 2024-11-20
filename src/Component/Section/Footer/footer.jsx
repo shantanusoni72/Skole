@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="footer-row-1">
         <div className="footer-row-1-col-1">
           <img src={tree_1_svg} alt="" />
-          <img src={foxy_svg} alt="" />
+          <img className="foxy" src={foxy_svg} alt="" />
         </div>
         <div className="footer-row-1-col-2">
           <img src={tree_2_svg} alt="" />

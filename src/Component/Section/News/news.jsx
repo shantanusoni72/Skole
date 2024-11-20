@@ -20,10 +20,10 @@ export default function News(props) {
         }
       </div>
       <Button
-        text="View all"
-        link="#"
-        type="bordered"
-      />
+          text="View all"
+          link="#"
+          type="bordered"
+        />
     </div>
   )
 }

@@ -4,15 +4,20 @@ import Button from '../../Util/Button/button';
 import Person_2 from '../../../assets/illustration-people-2.svg';
 import Snail from '../../../assets/snail.svg';
 import Path from '../../../assets/path.svg';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 export default function Schedule() {
     return (
         <div className='schedule'>
             <div className="schedule-row-1">
-                <h1>Come</h1>
+                <ScrollAnimation animateIn='bounceInRight' duration={1.5} initiallyVisible={true}>
+                    <h1>Come</h1>
+                </ScrollAnimation>
             </div>
             <div className="schedule-row-2">
-                <img src={Person_2} alt="" />
+                <ScrollAnimation animateIn='bounceInRight' duration={1.5} initiallyVisible={false}>
+                    <img src={Person_2} alt="" />
+                </ScrollAnimation>
                 <div className="schedule-row-2-col-2">
                     <h1>over and look around.</h1>
                     <p>
@@ -38,7 +43,9 @@ export default function Schedule() {
                 <h2>Email: <br />hi@kindergarten.com</h2>
             </div>
             <div className="schedule-row-5">
-                <img src={Snail} alt="" />
+                <ScrollAnimation animateIn='bounceInRight' duration={1.5} initiallyVisible={false}>
+                    <img src={Snail} alt="" />
+                </ScrollAnimation>
             </div>
         </div>
     )

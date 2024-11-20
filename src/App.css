@@ -13,13 +13,16 @@
     --h4: 15px;
     --fw: 700;
     --orange: #E74C25;
+    --orange-light: #FFDBD2;
     --blue: #0A303A;
     --blue-green: #167287;
+    --blue-light: #11A5E4;
+    --blue-lighter: #DFF8FF;
     --purple: #6572AE;
     --green: #38BC83;
+    --green-light: #E6F9E5;
     --gold: #A79201;
     --gold-light: #F4F1EA;
-    --blue-light: #11A5E4;
     --white: #FFFFFF;
     --black: #000000;
     --grey: #6b6b6b;
@@ -42,3 +45,7 @@
     padding: 0px;
     margin: 0px;
 }
+
+html, body {
+    overflow-x: hidden;
+} 
