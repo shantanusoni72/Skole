@@ -7,6 +7,7 @@
 
 .testimonial h1 {
     font-size: calc(var(--h1) + 200px);
+    font-family: calc(var(--fw) - 200);
     font-family: var(--ff-secondary);
     color: var(--blue);
     padding-inline: 10vw;
@@ -72,7 +73,7 @@
     }
     
     .testimonial h1 {
-        font-size: calc(var(--h1) + 100px);
+        font-size: calc(var(--h1) + 50px);
     }
     
     .testimonial-row {

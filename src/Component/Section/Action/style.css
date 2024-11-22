@@ -1,6 +1,6 @@
 .action {
     padding: 20px;
-    padding-block: 40px;
+    padding-block: 120px;
     display: flex;
     gap: 25px;
     justify-content: center;
@@ -12,6 +12,7 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 5px;
     width: 20vw;
     box-shadow: 7px 7px var(--grey-light);
@@ -32,6 +33,7 @@
     font-size: var(--h2);
     font-weight: calc(var(--fw) + 100);
     color: var(--blue);
+    line-height: 30px;
 }
 
 .action-box p {

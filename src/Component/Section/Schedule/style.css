@@ -7,7 +7,7 @@
 
 .schedule-row-1 h1 {
     font-size: calc(var(--h1) + 200px);
-    font-weight: calc(var(--fw));
+    font-weight: calc(var(--fw) - 200);
     color: var(--blue);
     font-family: var(--ff-secondary);
     margin-inline: 100px;
@@ -46,12 +46,23 @@
 }
 
 .schedule-row-3 {
+    width: 85%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 50px;
+    background-image: url('../../../assets/path.svg');
+    background-size: cover;
+    margin: auto;
 }
 
-.schedule-row-3 img {
-    width: 80%;
+.schedule-row-3-col {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leaf_2 {
+    width: 50%;
 }
 
 .schedule-row-4 {
@@ -69,8 +80,21 @@
     line-height: 25px;
 }
 
-.schedule-row-5 {
-    text-align: center;
+.animated {
+    padding-inline: 50px;
+    text-align: start;
+}
+
+.snail {
+    width: 30%;
+    margin: auto;
+}      
+
+@media screen and (max-width: 1024px) {
+    .snail {
+        width: 50%;
+        margin: auto;
+    }        
 }
 
 @media screen and (max-width: 768px) {
@@ -95,10 +119,25 @@
         line-height: 40px;
     }
     
+    .schedule-row-4 {
+        padding-inline: 40px;
+        gap: 40px;
+        justify-content: start;
+    }
+
     .button-group {
         flex-direction: column;
         gap: 5px;
         align-items: start;
+    }
+
+    .animated {
+        text-align: center;
+    }
+    
+    .snail {
+        width: 50%;
+        margin: auto;
     }
 }
 

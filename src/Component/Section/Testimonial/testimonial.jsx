@@ -11,6 +11,7 @@ import Parents_4 from '../../../assets/parents-4.jpg';
 import Parents_5 from '../../../assets/parents-5.jpg';
 import top from '../../../assets/tv-top.svg';
 import bottom from '../../../assets/tv-bottom.svg';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 export default function Testimonial() {
   const responsive = {
@@ -34,7 +35,9 @@ export default function Testimonial() {
 
   return (
     <div className='testimonial'>
-      <h1>Happy</h1>
+      <ScrollAnimation animateIn='bounceInRight' animateOut='bounceOutLeft' duration={1.5} initiallyVisible={true}>
+        <h1>Happy</h1>
+      </ScrollAnimation>
 
       <div className="testimonial-row">
         <div className="testimonial-col-1">

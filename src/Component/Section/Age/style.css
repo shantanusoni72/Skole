@@ -34,6 +34,7 @@
 
 .age-row-1 h1 {
     font-size: calc(var(--h1) + 200px);
+    font-weight: calc(var(--fw) - 200);
     font-family: var(--ff-secondary);
     color: var(--blue);
 }
@@ -156,7 +157,7 @@
     align-items: center;
     mask: url('../../../assets/small_dot.svg');
     background-color: var(--white);
-    border: 9px solid red;
+    border: 9px solid transparent;
     border-radius: 50%;
 }
 
@@ -173,6 +174,20 @@
     background-color: var(--black);
     border-radius: 50%;
     padding: 4px;
+}
+
+@media screen and (max-width: 1024px) {
+    .age-row-3 {
+        display: flex;
+        gap: 10px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding-inline: 2vw;
+    }
+    
+    .age-card {
+        width: 25%;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -206,13 +221,6 @@
         border-radius: 40px;
         padding: 20px;
         padding-block: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        gap: 15px;
-        mask: url('../../../assets/age-svg.svg') no-repeat center;
-        cursor: pointer;
     }
 }
 
@@ -231,6 +239,6 @@
     }
     
     .age-card {
-        width: 60%;
+        width: 80%;
     }
 }

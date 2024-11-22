@@ -3,15 +3,17 @@ import './style.css';
 import Button from '../../Util/Button/button';
 import Person_2 from '../../../assets/illustration-people-2.svg';
 import Snail from '../../../assets/snail.svg';
-import Path from '../../../assets/path.svg';
 import ScrollAnimation from 'react-animate-on-scroll';
+import Leaf_1 from '../../../assets/leaf-1.svg';
+import Leaf_2 from '../../../assets/leaf-2.svg';
+import Tree_1 from '../../../assets/illustration-tree-2.svg';
 
-export default function Schedule() {
+export default function Schedule(props) {
     return (
         <div className='schedule'>
             <div className="schedule-row-1">
                 <ScrollAnimation animateIn='bounceInRight' duration={1.5} initiallyVisible={true}>
-                    <h1>Come</h1>
+                    <h1>{props.data.shouted_heading}</h1>
                 </ScrollAnimation>
             </div>
             <div className="schedule-row-2">
@@ -19,13 +21,8 @@ export default function Schedule() {
                     <img src={Person_2} alt="" />
                 </ScrollAnimation>
                 <div className="schedule-row-2-col-2">
-                    <h1>over and look around.</h1>
-                    <p>
-                        We will explain everything you are intereste. Join our new session. If you have any questions or
-                        enquiries please feel free to contact us on the following details provided below or alternatively
-                        you can complete our online enquiry form also located below and we will get back to you as soon
-                        as possible…
-                    </p>
+                    <h1>{props.data.normal_heading}</h1>
+                    <p>{props.data.paragraph}</p>
                     <div className="button-group">
                         <Button text="Schedule a Tour" link="#" />
                         <p>or</p>
@@ -34,17 +31,21 @@ export default function Schedule() {
                 </div>
             </div>
             <div className="schedule-row-3">
-                <img src={Path} alt="" />
+                <div className="schedule-row-3-col">
+                    <img className="leaf_2" src={Leaf_2} alt="" />
+                    <img src={Leaf_1} alt="" />
+                </div>
+                <img src={Tree_1} alt="" />
             </div>
             <div className="schedule-row-4">
                 <h2>London, <br />United Kingdom</h2>
                 <h2>20 Manchester Square <br />London W1U 360</h2>
-                <h2>Phone: <br />(+1) 541-754-3010</h2>
-                <h2>Email: <br />hi@kindergarten.com</h2>
+                <h2>Phone: <br />{props.data.contact.phone}</h2>
+                <h2>Email: <br />{props.data.contact.email}</h2>
             </div>
             <div className="schedule-row-5">
                 <ScrollAnimation animateIn='bounceInRight' duration={1.5} initiallyVisible={false}>
-                    <img src={Snail} alt="" />
+                    <img className="snail" src={Snail} alt="" />
                 </ScrollAnimation>
             </div>
         </div>

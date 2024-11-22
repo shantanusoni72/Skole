@@ -1,47 +1,21 @@
 @keyframes dotBouncing {
 	0% {
-		animation-timing-function: ease-in;
 		opacity: 0;
-		transform: translateY(-250px);
+		transform: translateY(-50px);
 	}
 
-	38% {
-		animation-timing-function: ease-out;
-		opacity: 1;
-		transform: translateY(0);
+	50% {
+		transform: translateY(-25px) scale(1.2);
 	}
 
-	55% {
-		animation-timing-function: ease-in;
-		transform: translateY(-65px);
+	75% {
+		transform: translateY(-30px) scale(1);
 	}
 
-	72% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
-	}
-
-	81% {
-		animation-timing-function: ease-in;
-		transform: translateY(-28px);
-	}
-
-	90% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
-	}
-
-	95% {
-		animation-timing-function: ease-in;
-		transform: translateY(-8px);
-	}
-
-	100% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
+    100% {
+		transform: translateY(-20px);
 	}
 }
-
 
 @keyframes openMobileMenuAnimation {
     0% {
@@ -53,9 +27,10 @@
 }
 
 .top {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    position: sticky;
+    position: fixed;
     top: 0;
     gap: 0px;
     z-index: 99;
@@ -65,7 +40,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding-block: 15px;
+    padding-inline: 25px;
     background-color: var(--white);
 }
 
@@ -92,37 +68,34 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 0px;
     text-decoration: none;
-    color: var(--black);
+    color: var(--blue);
     font-weight: calc(var(--fw) + 100);
 }
 
-.header-menu ul li a svg {
-    display: none;
-}
-
-#home > *:hover {
+#home > svg {
     color: var(--orange);
 }
 
-#about > *:hover {
+#about > svg {
     color: var(--blue);
 }
 
-#programs > *:hover {
+#programs > svg {
     color: var(--purple);
 }
 
-#admissions > *:hover {
+#admissions > svg {
     color: var(--green);
 }
 
-#parents > *:hover {
+#parents > svg {
     color: var(--gold);
 }
 
-#location > *:hover {
+#location > svg {
     color: var(--blue-light);
 }
 
@@ -134,12 +107,12 @@
 }
 
 .header-end svg {
-    color: var(--blue);
+    color: var(--blue-green);
 }
 
 .link {
     text-decoration: none;
-    color: var(--blue);
+    color: var(--blue-green);
     font-weight: var(--fw);
     padding-block: 0px;
     cursor: pointer;
@@ -156,13 +129,15 @@
 }
 
 .header-menu svg {
-    animation: dotBouncing 0.8s ease 0s 1 normal forwards;
+    animation: dotBouncing 0.5s ease 0s 1 normal forwards;
+    display: block;
+    position: absolute;
 }
 
 .mobile-menu {
     width: 100%;
     padding-inline: 20px;
-    margin-top: 9vh;
+    margin-top: 5vh;
     position: absolute;
     background-color: var(--white);
     animation: openMobileMenuAnimation 0.4s;

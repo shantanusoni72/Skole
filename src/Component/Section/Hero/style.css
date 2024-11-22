@@ -16,6 +16,16 @@
     }
 }
 
+@keyframes openUpTextAnimation {
+    0% {
+        transform: scale(0.3) translateY(-100px);
+    }
+
+    100% {
+        transform: scale(1) translateY(0px);
+    }
+}
+
 .hero-container {
     display: flex;
     flex-direction: column;
@@ -25,36 +35,52 @@
 }
 
 .dots {
+    width: 50%;
     position: absolute;
-    width: 75%;
     animation: SplashingAnimation 0.8s;
+    margin-top: -550px;
+    z-index: 50;
 }
 
 .hero {
     width: 100%;
     background-image: url('../../../assets/hero.jpg');
-    height: 100vh;
+    background-color: #A0C3CE;
     padding-inline: 50px;
-    padding-top: 50px;
+    padding-top: 200px;
     padding-bottom: 0px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
     justify-content: end;
-    background-size: cover;
+    background-size: 1500px;
     background-repeat: repeat;
+    background-position: bottom right;
+    mask: var(--mask);
+    filter: brightness(0.98);
+    z-index: 1;
 }
 
 .hero-box {
     width: 70%;
-    height: 70vh;
-    background-image: url('../../../assets/slider-bg-floral.webp');
+    mask: url('../../../assets/slider-bg-floral.svg') no-repeat center;
+    background-color: var(--white);
     background-size: cover;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
+    justify-content: end;
     align-items: center;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    z-index: 2;
+}
+
+.bird {
+    width: 110px;
+    height: 90px;
+    animation: openUpTextAnimation 0.8s;
 }
 
 .hero-box h2 {
@@ -63,6 +89,7 @@
     color: var(--blue);
     text-align: center;
     line-height: 60px;
+    animation: openUpTextAnimation 0.4s;
 }
 
 .hero-box span {
@@ -74,11 +101,122 @@
 
 .hero-people {
     width: 30vw;
-    height: 30vh;
+    padding-block: 80px;
     background-image: url('../../../assets/people-button.webp');
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: openUpTextAnimation 0.4s;
+}
+
+@media screen and (max-width: 1024px) {
+    .hero {
+        padding-inline: 10px;
+        padding-top: 200px;
+        align-items: start;
+    }
+    
+    .hero-box {
+        width: 90%;
+    }
+
+    .hero-people {
+        width: 40%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-container {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hero {
+        width: 100%;
+        align-items: center;
+    }
+    
+    .hero-box {
+        width: 100%;
+    }
+    
+    .hero-box h2 {
+        font-size: calc(var(--h1) + 20px);
+        font-weight: calc(var(--fw) + 100);
+    }
+    
+    .bird {
+        width: 90px;
+        height: 70px;
+    }
+
+    .hero-people {
+        width: 50%;
+        padding-block: 90px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .hero {
+        width: 100%;
+        padding-inline: 50px;
+        padding-top: 200px;
+        padding-bottom: 0px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        mask: var(--mask);
+    }
+    
+    .hero-box {
+        width: 100%;
+        height: 120px;
+        mask: url('../../../assets/slider-bg-floral.svg') no-repeat auto;
+        background-color: var(--white);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: end;
+        align-items: center;
+        padding-top: 100px;
+    }
+    
+    .bird {
+        width: 60px;
+        height: 40px;
+    }
+
+    .hero-box h2 {
+        font-size: calc(var(--h2) + 0px);
+        font-weight: calc(var(--fw) + 100);
+        color: var(--blue);
+        text-align: center;
+        line-height: 30px;
+    }
+    
+    .hero-box span {
+        font-size: calc(var(--h1) + 0px);
+        font-weight: calc(var(--fw) + 100);
+        color: var(--blue);
+        text-align: center;
+    }
+    
+    .hero-people {
+        width: 30%;
+        padding-block: 0px;
+        background-image: url('../../../assets/people-button.webp');
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

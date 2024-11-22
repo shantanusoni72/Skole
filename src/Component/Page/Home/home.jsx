@@ -7,22 +7,17 @@ import Age from '../../Section/Age/age';
 import News from '../../Section/News/news';
 import Action from '../../Section/Action/action';
 import Testimonial from '../../Section/Testimonial/testimonial';
-import * as Interface from '../../../interface';
 
-export default function Home() {
+export default function Home(props) {
   return (
     <div className='home'>
-      <Hero />
-      <Presentation />
-      <Age />
-      <Schedule />
-      <News
-        data={Interface.news_content} 
-      /> 
+      <Hero intro_data={props.data.intro_section} />
+      <Presentation data={props.data.presentation_section} />
+      <Age data={props.data.age_section} />
+      <Schedule data={props.data.schedule_section} />
+      <News data={props.data.news_section} />
       <Testimonial />
-       <Action
-        data={Interface.actionInfo} 
-      />
+      <Action data={props.data.action_section} />
     </div>
   )
 }

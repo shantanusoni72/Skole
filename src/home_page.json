@@ -1,0 +1,144 @@
+{
+    "intro_section": {
+        "shouted_heading": "We",
+        "normal_heading": "are kindergarten and childhood is our passion.",
+        "paragraph": "We are excited and pleased to introduce you to the wonderful, passionate and committed educators who are working at Skole Learning Centre. Please take a moment to meet “Our Family!” We invited each of them to describe why they love working with children."
+    },
+    "presentation_section": {
+        "carousel": {
+            "first": {
+                "image_1": "/assets/toddles.webp",
+                "image_2": "/assets/gautam-arora-78Ae6N7rNvI-unsplash.jpg"
+            },
+            "second": {
+                "image_1": "/assets/h-15.jpg",
+                "image_2": "/assets/leo-rivas-wtxcaDIdOCM-unsplash.jpg",
+                "image_3": "/assets/anna-samoylova-w55SpMmoPgE-unsplash.jpg"
+            },
+            "third": {
+                "image_1": "/assets/h-05.jpg",
+                "image_2": "/assets/h-18.jpg",
+                "image_3": "/assets/h-30.jpg"
+            },
+            "fourth": {
+                "image_1": "/assets/news-1.webp",
+                "image_2": "/assets/h-16.jpg",
+                "image_3": "/assets/maggie-markel-oRbtEWw_l04-unsplash.jpg"
+            }
+        },
+        "slide_controls": [
+            "Home-like Environment",
+            "Safety and Security",
+            "Quality Educators",
+            "Play to Learn"
+        ],
+        "action": {
+            "image_1": "/assets/illustration-people-1.svg",
+            "button": {
+                "text": "Learn More",
+                "link": "#",
+                "type": "bordered"
+            },
+            "image_2": "/assets/tree-4.svg"
+        }
+    },
+    "schedule_section": {
+        "shouted_heading": "Come",
+        "normal_heading": "over and look around.",
+        "paragraph": "We will explain everything you are intereste. Join our new session. If you have any questions or enquiries please feel free to contact us on the following details provided below or alternatively you can complete our online enquiry form also located below and we will get back to you as soon as possible…",
+        "contact": {
+            "city": "London, \nUnited Kingdom",
+            "address": "20 Manchester Square \nLondon W1U 360",
+            "phone": "(+1) 541-754-3010",
+            "email": "hi@kindergarten.com"
+        }
+    },
+    "age_section": {
+        "shouted_heading": "Ages",
+        "normal_heading": "we meet kids where they are.",
+        "content": [
+            {
+                "section": "Infants",
+                "image": "assets/hero.jpg",
+                "desc": "Your baby will give you the most important information for the experience.",
+                "timing": "3-12 months 9:00 - 11:00h",
+                "url": "#"
+            },
+            {
+                "section": "Toddles",
+                "image": "/assets/toddles.webp",
+                "desc": "During this time, his physical growth and motor development will slow.",
+                "timing": "1-3 years 11:00 - 15:00h",
+                "url": "#"
+            },
+            {
+                "section": "Preschool",
+                "image": "/assets/preschool.webp",
+                "desc": "Your child is advancing from infancy toward and into the preschool years.",
+                "timing": "3-5 years 16:00 - 17:00h",
+                "url": "#"
+            },
+            {
+                "section": "Flex-Care",
+                "image": "/assets/flex-school.webp",
+                "desc": "Your child should feel confident in her ability to meet the complex challenges.",
+                "timing": "5-12 years 19:00 - 21:00h",
+                "url": "#"
+            }
+        ]
+    },
+    "news_section": {
+        "simple_heading": "News",
+        "content": [
+            {
+                "image": "/assets/news-1.webp",
+                "tag": "kids",
+                "heading": "The best learning toys for little kids, recommended by teachers!",
+                "url": "#"
+            },
+            {
+                "image": "/assets/news-2.webp",
+                "tag": "educate",
+                "heading": "How to choose the best child care center for you!",
+                "url": "#"
+            },
+            {
+                "image": "/assets/news-3.webp",
+                "tag": "DIY",
+                "heading": "Easy steps for choosing a cearning center – find just the right place.",
+                "url": "#"
+            }
+        ],
+        "button": {
+            "text": "View it all",
+            "link": "#",
+            "type": "bordered"
+        }
+    },
+    "action_section": [
+        {
+            "image": "/assets/help.svg",
+            "heading": "Any Questions?",
+            "message": {
+                "text": "Make an Enquiry",
+                "link": "#"
+            }
+        },
+        {
+            "image": "/assets/house.svg",
+            "heading": "See it Yourself!",
+            "message": {
+                "text": "Book a visit",
+                "link": "#"
+            }
+        },
+        {
+            "image": "/assets/description.svg",
+            "heading": "Ready to Join?",
+            "message": {
+                "text": "Register here",
+                "link": "#"
+            }
+        }
+    ]
+}

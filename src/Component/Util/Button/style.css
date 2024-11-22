@@ -1,7 +1,7 @@
 .button {
     background-color: var(--orange);
-    padding-inline: 20px;
-    padding-block: 7px;
+    padding-inline: 30px;
+    padding-block: 13px;
     border-radius: 5px;
     cursor: pointer;
     z-index: 4;
@@ -27,4 +27,13 @@
     background-color: var(--blue);
     border: 1px solid var(--blue);
     color: var(--white);
+}
+
+@media screen and (max-width: 440px) {
+    .button {
+        background-color: var(--orange);
+        padding-inline: 15px;
+        padding-block: 10px;
+        border-radius: 5px;
+    }
 }

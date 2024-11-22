@@ -1,19 +1,28 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './style.css';
+import ScrollAnimation from 'react-animate-on-scroll';
+// import { motion } from 'motion/react';
 
-export default function Intro() {
+export default function Intro(props) {
+    // const scrollRef = useRef(null);
+
     return (
-        <div className='intro'>
+        <div className='intro' ref={scrollRef}>
             <div className="intro-col-1">
-                <h1>We</h1>
+                <ScrollAnimation animateIn='bounceInRight' animateOut='bounceOutLeft' duration={1} initiallyVisible={true}>
+                {/* <motion.div 
+                    viewport={{root: scrollRef}}
+                    initial={{translateX: 300, scale: 1.5}} 
+                    whileInView={{translateX: 0, scale: 1}}
+                    transition={2} 
+                > */}
+                    <h1>{props.intro_data.shouted_heading}</h1>
+                {/* </motion.div> */}
+                </ScrollAnimation>
             </div>
             <div className="intro-col-2">
-                <h2>are kindergarten and childhood is our passion.</h2>
-                <p>
-                    We are excited and pleased to introduce you to the wonderful, passionate and committed educators who are
-                    working at Skole Learning Centre. Please take a moment to meet “Our Family!” We invited each of them to
-                    describe why they love working with children.
-                </p>
+                <h2>{props.intro_data.normal_heading}</h2>
+                <p>{props.intro_data.paragraph}</p>
             </div>
         </div>
     )

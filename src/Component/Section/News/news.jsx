@@ -7,10 +7,10 @@ export default function News(props) {
 
   return (
     <div className='news-container'>
-      <h1 id="heading">News</h1>
+      <h1 id="heading">{props.data.simple_heading}</h1>
       <div className="news">
         {
-          props.data.map((item, index) => (
+          props.data.content.map((item, index) => (
             <div className="news-card">
               <label>{item.tag}</label>
               <img src={item.image} alt=""></img>
@@ -20,9 +20,9 @@ export default function News(props) {
         }
       </div>
       <Button
-          text="View all"
-          link="#"
-          type="bordered"
+          text={props.data.button.text}
+          link={props.data.button.link}
+          type={props.data.button.type}
         />
     </div>
   )

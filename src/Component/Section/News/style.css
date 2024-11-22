@@ -17,11 +17,10 @@
 }
 
 .news {
-    padding-left: 40px;
     padding-bottom: 50px;
     display: flex;
     gap: 40px;
-    justify-content: start;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -80,6 +79,6 @@
 
 @media screen and (max-width: 440px) {
     .news-card {
-        width: 85%;
+        width: 80%;
     }
 }
