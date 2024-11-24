@@ -11,12 +11,19 @@
     color: var(--blue);
     font-family: var(--ff-secondary);
     margin-inline: 100px;
+    animation: headingEntryAnimation 2s;
+    animation-timeline: scroll(root block);
 }
 
 .schedule-row-2 {
     display: flex;
     gap: 100px;
     padding-left: 20vw;
+}
+
+.schedule-row-2 img {
+    animation: headingEntryAnimation 2s;
+    animation-timeline: scroll(root block);
 }
 
 .schedule-row-2-col-2 {
@@ -88,6 +95,8 @@
 .snail {
     width: 30%;
     margin: auto;
+    animation: headingEntryAnimation 2s;
+    animation-timeline: scroll(root block);
 }      
 
 @media screen and (max-width: 1024px) {
@@ -144,6 +153,7 @@
 @media screen and (max-width: 440px) {
     .schedule-row-1 h1 {
         font-size: calc(var(--h1) + 50px);
+        animation: none;
     }
     
     .schedule-row-2 {
@@ -155,6 +165,7 @@
 
     .schedule-row-2 img {
         width: 60%;
+        animation: none;
     }
     
     .schedule-row-2-col-2 {

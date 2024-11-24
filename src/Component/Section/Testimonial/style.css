@@ -11,6 +11,8 @@
     font-family: var(--ff-secondary);
     color: var(--blue);
     padding-inline: 10vw;
+    animation: headingEntryAnimation 2s;
+    animation-timeline: scroll(self block);
 }
 
 .testimonial-row {

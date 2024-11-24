@@ -6,9 +6,7 @@ export default function Age(props) {
     return (
         <div className='age-container'>
             <div className="age-row-1">
-                <ScrollAnimation animateIn='bounceInRight' animateOut='bounceOutLeft' duration={1.5} initiallyVisible={true}>
-                    <h1>{props.data.shouted_heading}</h1>
-                </ScrollAnimation>
+                <h1>{props.data.shouted_heading}</h1>
             </div>
             <div className="age-row-2">
                 <h1>{props.data.normal_heading}</h1>

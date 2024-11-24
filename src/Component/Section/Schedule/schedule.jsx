@@ -12,14 +12,10 @@ export default function Schedule(props) {
     return (
         <div className='schedule'>
             <div className="schedule-row-1">
-                <ScrollAnimation animateIn='bounceInRight' duration={1.5} initiallyVisible={true}>
-                    <h1>{props.data.shouted_heading}</h1>
-                </ScrollAnimation>
+                <h1>{props.data.shouted_heading}</h1>
             </div>
             <div className="schedule-row-2">
-                <ScrollAnimation animateIn='bounceInRight' duration={1.5} initiallyVisible={false}>
-                    <img src={Person_2} alt="" />
-                </ScrollAnimation>
+                <img src={Person_2} alt="" />
                 <div className="schedule-row-2-col-2">
                     <h1>{props.data.normal_heading}</h1>
                     <p>{props.data.paragraph}</p>
@@ -44,9 +40,7 @@ export default function Schedule(props) {
                 <h2>Email: <br />{props.data.contact.email}</h2>
             </div>
             <div className="schedule-row-5">
-                <ScrollAnimation animateIn='bounceInRight' duration={1.5} initiallyVisible={false}>
-                    <img className="snail" src={Snail} alt="" />
-                </ScrollAnimation>
+                <img className="snail" src={Snail} alt="" />
             </div>
         </div>
     )

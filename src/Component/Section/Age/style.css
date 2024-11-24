@@ -37,6 +37,8 @@
     font-weight: calc(var(--fw) - 200);
     font-family: var(--ff-secondary);
     color: var(--blue);
+    animation: headingEntryAnimation 2s;
+    animation-timeline: scroll(root block);
 }
 
 .age-row-2 {
@@ -229,6 +231,10 @@
         padding-inline: 10vw;
     }
     
+    .age-row-1 h1 {
+        animation: none;
+    }
+
     .age-row-2 {
         padding-left: 7vw;
     }

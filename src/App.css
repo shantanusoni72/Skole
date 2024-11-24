@@ -4,6 +4,15 @@
 /* Sensei Font */
 @import url('https://fonts.cdnfonts.com/css/sensei');
 
+@keyframes headingEntryAnimation {
+    from {
+        transform: translateX(400px) scale(1.2);
+    }
+    to {
+        transform: translateX(0px) scale(1);
+    }
+}
+
 :root {
     --ff-primary: 'Catamaran', sans-serif;
     --ff-secondary: 'Sensei', serif;

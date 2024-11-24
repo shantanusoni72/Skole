@@ -35,9 +35,7 @@ export default function Testimonial() {
 
   return (
     <div className='testimonial'>
-      <ScrollAnimation animateIn='bounceInRight' animateOut='bounceOutLeft' duration={1.5} initiallyVisible={true}>
-        <h1>Happy</h1>
-      </ScrollAnimation>
+      <h1>Happy</h1>
 
       <div className="testimonial-row">
         <div className="testimonial-col-1">

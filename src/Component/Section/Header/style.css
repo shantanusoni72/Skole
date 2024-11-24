@@ -79,24 +79,72 @@
     color: var(--orange);
 }
 
+#home .svg {
+    display: none;
+}
+
+#home .svg.show {
+    display: block;
+}
+
 #about > svg {
     color: var(--blue);
+}
+
+#about .svg {
+    display: none;
+}
+
+#about .svg.show {
+    display: block;
 }
 
 #programs > svg {
     color: var(--purple);
 }
 
+#programs .svg {
+    display: none;
+}
+
+#programs .svg.show {
+    display: block;
+}
+
 #admissions > svg {
     color: var(--green);
+}
+
+#admissions .svg {
+    display: none;
+}
+
+#admissions .svg.show {
+    display: block;
 }
 
 #parents > svg {
     color: var(--gold);
 }
 
+#parents .svg {
+    display: none;
+}
+
+#parents .svg.show {
+    display: block;
+}
+
 #location > svg {
     color: var(--blue-light);
+}
+
+#location .svg {
+    display: none;
+}
+
+#location .svg.show {
+    display: block;
 }
 
 .header-end {

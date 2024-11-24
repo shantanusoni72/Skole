@@ -10,6 +10,30 @@ export default function Header() {
     mobilemenu.classList.toggle('hidden');
   }
 
+  const textOnMouseOver = (id) => {
+    document.querySelector('#' + id + ' .svg').classList.add('show');
+    var color;
+    if (id === 'home') {
+      color = '#E74C25';
+    } else if (id === 'about') {
+      color = '#0A303A';
+    } else if (id === 'programs') {
+      color = '#6572AE';
+    } else if (id === 'admissions') {
+      color = '#38BC83';
+    } else if (id === 'parents') {
+      color = '#A79201';
+    } else {
+      color = '#11A5E4';
+    }
+    document.querySelector('#' + id + ' .span').style.color = color;
+  }
+
+  const textOnMouseOut = (id) => {
+    document.querySelector('#' + id + ' .svg').classList.remove('show');
+    document.querySelector('#' + id + ' .span').style.color = 'var(--blue)';
+  }
+
   return (
     <div className="top">
       <div className='header'>
@@ -26,7 +50,15 @@ export default function Header() {
                       <svg xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#E74C25"><path d="M480.2-240Q380-240 310-309.8q-70-69.8-70-170T309.8-650q69.8-70 170-70T650-650.2q70 69.8 70 170T650.2-310q-69.8 70-170 70Z" />
                       </svg>
                       <span style={{ color: 'var(--orange)' }}>Home</span>
-                    </> : <span>Home</span>
+                    </> : <>
+                      <svg className="svg" xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#E74C25"><path d="M480.2-240Q380-240 310-309.8q-70-69.8-70-170T309.8-650q69.8-70 170-70T650-650.2q70 69.8 70 170T650.2-310q-69.8 70-170 70Z" />
+                      </svg>
+                      <span 
+                        className="span"
+                        onMouseOver={ () => textOnMouseOver('home') } 
+                        onMouseOut={ () => textOnMouseOut('home') }
+                      >Home</span>
+                    </>
                 }
               </a></li>
               <li id="about"><a href="#" onClick={() => setToggleDotMenu('about')}>
@@ -36,7 +68,15 @@ export default function Header() {
                       <svg xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#0A303A"><path d="M480.2-240Q380-240 310-309.8q-70-69.8-70-170T309.8-650q69.8-70 170-70T650-650.2q70 69.8 70 170T650.2-310q-69.8 70-170 70Z" />
                       </svg>
                       <span style={{ color: 'var(--blue)' }}>About</span>
-                    </> : <span>About</span>
+                    </> : <>
+                      <svg className="svg" xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#0A303A"><path d="M480.2-240Q380-240 310-309.8q-70-69.8-70-170T309.8-650q69.8-70 170-70T650-650.2q70 69.8 70 170T650.2-310q-69.8 70-170 70Z" />
+                      </svg>
+                      <span 
+                        className="span"
+                        onMouseOver={ () => textOnMouseOver('about') } 
+                        onMouseOut={ () => textOnMouseOut('about') }
+                      >About</span>
+                    </>
                 }
               </a></li>
               <li id="programs"><a href="#" onClick={() => setToggleDotMenu('programs')}>
@@ -46,7 +86,15 @@ export default function Header() {
                       <svg xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#6572AE"><path d="M480.2-240Q380-240 310-309.8q-70-69.8-70-170T309.8-650q69.8-70 170-70T650-650.2q70 69.8 70 170T650.2-310q-69.8 70-170 70Z" />
                       </svg>
                       <span style={{ color: 'var(--purple)' }}>Programs</span>
-                    </> : <span>Programs</span>
+                    </> : <>
+                      <svg className="svg" xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#6572AE"><path d="M480.2-240Q380-240 310-309.8q-70-69.8-70-170T309.8-650q69.8-70 170-70T650-650.2q70 69.8 70 170T650.2-310q-69.8 70-170 70Z" />
+                      </svg>
+                      <span 
+                        className="span"
+                        onMouseOver={ () => textOnMouseOver('programs') } 
+                        onMouseOut={ () => textOnMouseOut('programs') }
+                      >Programs</span>
+                    </>
                 }
               </a></li>
               <li id="admissions"><a href="#" onClick={() => setToggleDotMenu('admissions')}>
@@ -56,7 +104,16 @@ export default function Header() {
                       <svg xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#38BC83"><path d="M480.2-240Q380-240 310-309.8q-70-69.8-70-170T309.8-650q69.8-70 170-70T650-650.2q70 69.8 70 170T650.2-310q-69.8 70-170 70Z" />
                       </svg>
                       <span style={{ color: 'var(--green)' }}>Admissions</span>
-                    </> : <span>Admissions</span>
+                    </> :
+                    <>
+                      <svg className="svg" xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#38BC83"><path d="M480.2-240Q380-240 310-309.8q-70-69.8-70-170T309.8-650q69.8-70 170-70T650-650.2q70 69.8 70 170T650.2-310q-69.8 70-170 70Z" />
+                      </svg>
+                      <span
+                        className="span"
+                        onMouseOver={ () => textOnMouseOver('admissions') } 
+                        onMouseOut={ () => textOnMouseOut('admissions') }
+                      >Admissions</span>
+                    </>
                 }
               </a></li>
               <li id="parents"><a href="#" onClick={() => setToggleDotMenu('parents')}>
@@ -66,7 +123,16 @@ export default function Header() {
                       <svg xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#A79201"><path d="M480.2-240Q380-240 310-309.8q-70-69.8-70-170T309.8-650q69.8-70 170-70T650-650.2q70 69.8 70 170T650.2-310q-69.8 70-170 70Z" />
                       </svg>
                       <span style={{ color: 'var(--gold)' }}>Parents</span>
-                    </> : <span>Parents</span>
+                    </> :
+                    <>
+                      <svg className="svg" xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#A79201"><path d="M480.2-240Q380-240 310-309.8q-70-69.8-70-170T309.8-650q69.8-70 170-70T650-650.2q70 69.8 70 170T650.2-310q-69.8 70-170 70Z" />
+                      </svg>
+                      <span
+                        className="span"
+                        onMouseOver={ () => textOnMouseOver('parents') } 
+                        onMouseOut={ () => textOnMouseOut('parents') }
+                      >Parents</span>
+                    </>
                 }
               </a></li>
               <li id="location"><a href="#" onClick={() => setToggleDotMenu('location')}>
@@ -76,7 +142,16 @@ export default function Header() {
                       <svg xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#11A5E4"><path d="M480.2-240Q380-240 310-309.8q-70-69.8-70-170T309.8-650q69.8-70 170-70T650-650.2q70 69.8 70 170T650.2-310q-69.8 70-170 70Z" />
                       </svg>
                       <span style={{ color: 'var(--blue-light)' }}>Location</span>
-                    </> : <span>Location</span>
+                    </> :
+                    <>
+                      <svg className="svg" xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#11A5E4"><path d="M480.2-240Q380-240 310-309.8q-70-69.8-70-170T309.8-650q69.8-70 170-70T650-650.2q70 69.8 70 170T650.2-310q-69.8 70-170 70Z" />
+                      </svg>
+                      <span
+                        className="span"
+                        onMouseOver={ () => textOnMouseOver('location') } 
+                        onMouseOut={ () => textOnMouseOut('location') }
+                      >Location</span>
+                    </>
                 }
               </a></li>
             </ul>
