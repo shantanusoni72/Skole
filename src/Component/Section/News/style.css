@@ -34,6 +34,7 @@
     gap: 10px;
     align-items: start;
     cursor: pointer;
+    transition: 0.4s;
 }
 
 .news-card:hover {
@@ -44,6 +45,7 @@
     width: 100%;
     border-radius: 20px;
     mask: var(--box-mask);
+    transition: 0.4s;
 }
 
 .news-card img:hover {
@@ -71,6 +73,7 @@
     color: var(--blue);
     text-decoration: none;
     line-height: 30px;
+    transition: 0.4s;
 }
 
 .news-card a:hover {

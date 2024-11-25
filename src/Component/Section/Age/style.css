@@ -19,11 +19,12 @@
 .age-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 28px;
+    padding-bottom: 80px;
     background-image: url('../../../assets/moo.svg');
     background-repeat: no-repeat;
     background-position: right;
-    background-size: contain;
+    background-size: 22%;
 }
 
 .age-row-1 {
@@ -37,8 +38,9 @@
     font-weight: calc(var(--fw) - 200);
     font-family: var(--ff-secondary);
     color: var(--blue);
-    animation: headingEntryAnimation 2s;
-    animation-timeline: scroll(root block);
+    text-align: start;
+    /* animation: AgeHeadingEntryAnimation 2s;
+    animation-timeline: scroll(root block); */
 }
 
 .age-row-2 {
@@ -55,14 +57,14 @@
 
 .age-row-3 {
     display: flex;
-    gap: 20px;
+    gap: 18px;
     justify-content: space-around;
     flex-wrap: wrap;
     padding-inline: 5vw;
 }
 
 .age-card {
-    width: 18vw;
+    width: 16vw;
     border-radius: 40px;
     padding: 20px;
     padding-block: 20px;
@@ -70,9 +72,10 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
     mask: url('../../../assets/age-svg.svg') no-repeat center;
     cursor: pointer;
+    text-decoration: none;
 }
 
 #age-card-1 {
@@ -92,11 +95,11 @@
 }
 
 #age-card-2 h2, #age-card-2 label {
-    color: var(--blue-light);
+    color: var(--blue-green);
 }
 
 #age-card-2 .vantam-eye {
-    border-color: var(--blue-light);
+    border-color: var(--blue-green);
 }
 
 #age-card-3 {
@@ -116,11 +119,11 @@
 }
 
 #age-card-4 h2, #age-card-4 label {
-    color: var(--green);
+    color: var(--green-dark);
 }
 
 #age-card-4 .vantam-eye {
-    border-color: var(--green);
+    border-color: var(--green-dark);
 }
 
 .age-card h2 {
@@ -140,8 +143,8 @@
 }
 
 .age-card p {
-    font-size: var(--h4);
-    font-weight: calc(var(--fw) - 200);
+    font-size: calc(var(--h4) + 1px);
+    font-weight: calc(var(--fw) - 300);
     line-height: 20px;
     text-align: center;
     color: var(--blue);
@@ -159,7 +162,7 @@
     align-items: center;
     mask: url('../../../assets/small_dot.svg');
     background-color: var(--white);
-    border: 9px solid transparent;
+    border: 13px solid transparent;
     border-radius: 50%;
 }
 
@@ -168,7 +171,7 @@
     align-items: center;
     mask: url('../../../assets/small_dot.svg');
     background-color: var(--white);
-    padding: 5px;
+    padding: 7px;
     border-radius: 50%;
 }
 

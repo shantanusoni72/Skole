@@ -3,7 +3,6 @@ import './style.css';
 import Button from '../../Util/Button/button';
 import Person_2 from '../../../assets/illustration-people-2.svg';
 import Snail from '../../../assets/snail.svg';
-import ScrollAnimation from 'react-animate-on-scroll';
 import Leaf_1 from '../../../assets/leaf-1.svg';
 import Leaf_2 from '../../../assets/leaf-2.svg';
 import Tree_1 from '../../../assets/illustration-tree-2.svg';

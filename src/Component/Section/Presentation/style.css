@@ -1,3 +1,12 @@
+@keyframes MotherEntryAnimation {
+    from {
+        transform: translateX(-10px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
 .presentation {
     display: flex;
     justify-content: space-around;
@@ -17,11 +26,19 @@
     counter-increment: item;
 }
 
-.presentation-controller ol li a:active {
-    color: var(--blue-light);
+.presentation-controller ol li::before {
+    content: counter(item);
+    background-color: transparent;
+    padding-inline: 15px;
+    padding-block: 7px;
+    border-radius: 50%;
+    mask: url('../../../assets/numbering.svg') no-repeat center;
+    font-family: var(--ff-secondary);
+    color: var(--blue-green);
+    cursor: pointer;
 }
 
-.presentation-controller ol li::before {
+.presentation-controller ol li.selected::before {
     content: counter(item);
     background-color: var(--blue-green);
     padding-inline: 15px;
@@ -41,16 +58,22 @@
     cursor: pointer;
 }
 
-.presentation-controller ol li:focus {
-    color: var(--blue-green);
+.presentation-controller ol li.selected a {
+    color: var(--blue-green)
 }
 
 .presentation-carousel {
     width: 40vw;
+    transition: 1s;
 }
 
 .presentation-carousel.hidden {
     display: none;
+}
+
+.presentation-image-inner img {
+    animation: MotherEntryAnimation;
+    animation-timeline: scroll(root block);
 }
 
 .presentation-slide {

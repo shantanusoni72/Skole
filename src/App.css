@@ -6,7 +6,7 @@
 
 @keyframes headingEntryAnimation {
     from {
-        transform: translateX(400px) scale(1.2);
+        transform: translateX(300px) scale(1.2);
     }
     to {
         transform: translateX(0px) scale(1);
@@ -29,9 +29,10 @@
     --blue-lighter: #DFF8FF;
     --purple: #6572AE;
     --green: #38BC83;
+    --green-dark: #5E9F5A;
     --green-light: #E6F9E5;
-    --gold: #A79201;
-    --gold-light: #F4F1EA;
+    --gold: #F68F29;
+    --gold-light: #FFEFDF;
     --white: #FFFFFF;
     --black: #000000;
     --grey: #6b6b6b;

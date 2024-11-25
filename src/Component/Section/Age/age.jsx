@@ -1,6 +1,5 @@
 import React from 'react';
 import './style.css';
-import ScrollAnimation from 'react-animate-on-scroll';
 
 export default function Age(props) {
     return (
@@ -14,7 +13,7 @@ export default function Age(props) {
             <div className="age-row-3">
                 {
                     props.data.content.map((item, index) => (
-                        <div id={`age-card-${index + 1}`} className="age-card">
+                        <a href={item.url} id={`age-card-${index + 1}`} className="age-card">
                             <h2>{item.section}</h2>
                             <img src={item.image} alt={item.section} />
                             <p>{item.desc}</p>
@@ -24,7 +23,7 @@ export default function Age(props) {
                                     <a href={item.url}><span></span></a>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     ))
                 }
             </div>

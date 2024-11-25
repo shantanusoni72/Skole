@@ -16,7 +16,7 @@ export default function Home(props) {
       <Age data={props.data.age_section} />
       <Schedule data={props.data.schedule_section} />
       <News data={props.data.news_section} />
-      <Testimonial />
+      <Testimonial data={props.data.testimonial_section} />
       <Action data={props.data.action_section} />
     </div>
   )

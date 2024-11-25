@@ -16,13 +16,19 @@
     }
 }
 
+@keyframes dotsOnScroll {
+    to {
+        transform: translateY(1800px);
+    }
+}
+
 @keyframes openUpTextAnimation {
     0% {
-        transform: scale(0.3) translateY(-100px);
+        transform: scale(0.3);
     }
 
     100% {
-        transform: scale(1) translateY(0px);
+        transform: scale(1);
     }
 }
 
@@ -36,16 +42,27 @@
 
 .dots {
     width: 50%;
+    max-height: 350px;
     position: absolute;
     animation: SplashingAnimation 0.8s;
-    margin-top: -550px;
-    z-index: 50;
+    z-index: 5;
+}
+
+.dots.scrolled {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    transition: 0.2s;
+    /* transform: translateY(-100px); */
+    animation: dotsOnScroll;
+    animation-timeline: scroll(root block);
+    z-index: 1;
 }
 
 .hero {
     width: 100%;
-    background-image: url('../../../assets/hero.jpg');
-    background-color: #A0C3CE;
+    background: var(--grey);
+    background: linear-gradient(rgb(107,107,107,0.2), rgb(107,107,107,0.2)), url("../../../assets/hero.jpg");
     padding-inline: 50px;
     padding-top: 200px;
     padding-bottom: 0px;
@@ -58,8 +75,6 @@
     background-repeat: repeat;
     background-position: bottom right;
     mask: var(--mask);
-    filter: brightness(0.98);
-    z-index: 1;
 }
 
 .hero-box {
@@ -74,12 +89,10 @@
     align-items: center;
     padding-top: 80px;
     padding-bottom: 30px;
-    z-index: 2;
 }
 
 .bird {
     width: 110px;
-    height: 90px;
     animation: openUpTextAnimation 0.8s;
 }
 
@@ -89,7 +102,7 @@
     color: var(--blue);
     text-align: center;
     line-height: 60px;
-    animation: openUpTextAnimation 0.4s;
+    animation: openUpTextAnimation 0.8s;
 }
 
 .hero-box span {
@@ -108,7 +121,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: openUpTextAnimation 0.4s;
+    position: relative;
+    z-index: 10;
+    animation: openUpTextAnimation 0.8s;
 }
 
 @media screen and (max-width: 1024px) {
@@ -130,6 +145,24 @@
     }
 }
 
+@media screen and (max-width: 992px) {
+    .hero {
+        mask: none;
+    }
+    
+    .horizontal-waves {
+        display: none;
+    }
+
+    .hero-box {
+        padding-bottom: 0px;
+    }
+
+    .hero-people {
+        padding-block: 40px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .hero-container {
         justify-content: center;
@@ -139,25 +172,23 @@
     .hero {
         width: 100%;
         align-items: center;
+        padding-bottom: 0px;
+        mask: none;
     }
     
     .hero-box {
         width: 100%;
+        padding-bottom: 0px;
     }
     
     .hero-box h2 {
         font-size: calc(var(--h1) + 20px);
         font-weight: calc(var(--fw) + 100);
     }
-    
-    .bird {
-        width: 90px;
-        height: 70px;
-    }
 
     .hero-people {
         width: 50%;
-        padding-block: 90px;
+        padding-block: 70px;
         justify-content: center;
         align-items: center;
     }
@@ -167,17 +198,21 @@
     .hero {
         width: 100%;
         padding-inline: 50px;
-        padding-top: 200px;
+        padding-top: 250px;
         padding-bottom: 0px;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
-        mask: var(--mask);
+        mask: none;
     }
     
+    .dots {
+        display: none;
+    }
+
     .hero-box {
         width: 100%;
-        height: 120px;
+        max-height: fit-content;
         mask: url('../../../assets/slider-bg-floral.svg') no-repeat auto;
         background-color: var(--white);
         background-size: cover;
@@ -186,12 +221,12 @@
         gap: 10px;
         justify-content: end;
         align-items: center;
-        padding-top: 100px;
+        padding-top: 20px;
+        padding-bottom: 0px;
     }
-    
+
     .bird {
-        width: 60px;
-        height: 40px;
+        width: 50px;
     }
 
     .hero-box h2 {

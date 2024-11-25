@@ -59,7 +59,7 @@
         "content": [
             {
                 "section": "Infants",
-                "image": "assets/hero.jpg",
+                "image": "assets/h-17.webp",
                 "desc": "Your baby will give you the most important information for the experience.",
                 "timing": "3-12 months 9:00 - 11:00h",
                 "url": "#"
@@ -114,6 +114,50 @@
             "link": "#",
             "type": "bordered"
         }
+    },
+    "testimonial_section": {
+        "shouted_heading": "Happy",
+        "tv_images": {
+            "top": "/assets/tv-top.svg",
+            "bottom": "/assets/tv-bottom.svg"
+        },
+        "carousel": [
+            {
+                "image": "/assets/parents-1.jpg",
+                "name": "Megan Timberland",
+                "link": "#"
+            },
+            {
+                "image": "/assets/parents-2.jpg",
+                "name": "Megan Timberland",
+                "link": "#"
+            },
+            {
+                "image": "/assets/parents-3.jpg",
+                "name": "Megan Timberland",
+                "link": "#"
+            },
+            {
+                "image": "/assets/parents-4.jpg",
+                "name": "Megan Timberland",
+                "link": "#"
+            },
+            {
+                "image": "/assets/parents-5.jpg",
+                "name": "Megan Timberland",
+                "link": "#"
+            }
+        ],
+        "content": {
+            "title": "kids. Just watch what parents say.",
+            "desc": "None bigger than early education. Parents know that at KinderCare we make it our passion to nurture a sense of discovery.",
+            "button": {
+                "text": "Watch all Testimonials",
+                "link": "#",
+                "type": "bordered"
+            }
+        },
+        "side_image": "/assets/illustration-people-3.svg"
     },
     "action_section": [
         {

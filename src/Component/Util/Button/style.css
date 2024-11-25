@@ -1,7 +1,7 @@
 .button {
     background-color: var(--orange);
-    padding-inline: 30px;
-    padding-block: 13px;
+    padding-inline: 25px;
+    padding-block: 10px;
     border-radius: 5px;
     cursor: pointer;
     z-index: 4;

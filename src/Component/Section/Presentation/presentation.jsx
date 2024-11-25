@@ -66,10 +66,10 @@ export default function Presentation(props) {
             </div>
             <div className="presentation-controller">
                 <ol>
-                    <li onClick={() => setActiveSlider(1)}><a>{props.data.slide_controls[0]}</a></li>
-                    <li onClick={() => setActiveSlider(2)}><a>{props.data.slide_controls[1]}</a></li>
-                    <li onClick={() => setActiveSlider(3)}><a>{props.data.slide_controls[2]}</a></li>
-                    <li onClick={() => setActiveSlider(4)}><a>{props.data.slide_controls[3]}</a></li>
+                    <li className={`${activeSlider === 1 ? "selected" : ""}`} onClick={() => setActiveSlider(1)}><a>{props.data.slide_controls[0]}</a></li>
+                    <li className={`${activeSlider === 2 ? "selected" : ""}`} onClick={() => setActiveSlider(2)}><a>{props.data.slide_controls[1]}</a></li>
+                    <li className={`${activeSlider === 3 ? "selected" : ""}`} onClick={() => setActiveSlider(3)}><a>{props.data.slide_controls[2]}</a></li>
+                    <li className={`${activeSlider === 4 ? "selected" : ""}`} onClick={() => setActiveSlider(4)}><a>{props.data.slide_controls[3]}</a></li>
                 </ol>
             </div>
             <div className="presentation-image">

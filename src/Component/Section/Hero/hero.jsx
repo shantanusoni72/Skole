@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './style.css';
 import Button from '../../Util/Button/button';
 import Intro from '../../Section/Intro/intro';
 
 export default function Hero(props) {
+
+  const triggerDotRainingAnimation = () => {
+    const dots = document.querySelector('.dots');
+    dots.classList.add('scrolled');
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", triggerDotRainingAnimation);
+
+    return () => window.removeEventListener("scroll", triggerDotRainingAnimation);
+  }, []);
 
   return (
     <div className="hero-container">
