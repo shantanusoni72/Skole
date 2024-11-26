@@ -28,9 +28,11 @@ export default function Schedule(props) {
             <div className="schedule-row-3">
                 <div className="schedule-row-3-col">
                     <img className="leaf_2" src={Leaf_2} alt="" />
-                    <img src={Leaf_1} alt="" />
+                    <img className="leaf_1" src={Leaf_1} alt="" />
                 </div>
-                <img src={Tree_1} alt="" />
+                <div className="schedule-row-3-col-2">
+                    <img src={Tree_1} alt="" />
+                </div>
             </div>
             <div className="schedule-row-4">
                 <h2>London, <br />United Kingdom</h2>

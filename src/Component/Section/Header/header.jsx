@@ -53,10 +53,10 @@ export default function Header() {
                     </> : <>
                       <svg className="svg" xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#E74C25"><path d="M480.2-240Q380-240 310-309.8q-70-69.8-70-170T309.8-650q69.8-70 170-70T650-650.2q70 69.8 70 170T650.2-310q-69.8 70-170 70Z" />
                       </svg>
-                      <span 
+                      <span
                         className="span"
-                        onMouseOver={ () => textOnMouseOver('home') } 
-                        onMouseOut={ () => textOnMouseOut('home') }
+                        onMouseOver={() => textOnMouseOver('home')}
+                        onMouseOut={() => textOnMouseOut('home')}
                       >Home</span>
                     </>
                 }
@@ -71,10 +71,10 @@ export default function Header() {
                     </> : <>
                       <svg className="svg" xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#0A303A"><path d="M480.2-240Q380-240 310-309.8q-70-69.8-70-170T309.8-650q69.8-70 170-70T650-650.2q70 69.8 70 170T650.2-310q-69.8 70-170 70Z" />
                       </svg>
-                      <span 
+                      <span
                         className="span"
-                        onMouseOver={ () => textOnMouseOver('about') } 
-                        onMouseOut={ () => textOnMouseOut('about') }
+                        onMouseOver={() => textOnMouseOver('about')}
+                        onMouseOut={() => textOnMouseOut('about')}
                       >About</span>
                     </>
                 }
@@ -89,10 +89,10 @@ export default function Header() {
                     </> : <>
                       <svg className="svg" xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#6572AE"><path d="M480.2-240Q380-240 310-309.8q-70-69.8-70-170T309.8-650q69.8-70 170-70T650-650.2q70 69.8 70 170T650.2-310q-69.8 70-170 70Z" />
                       </svg>
-                      <span 
+                      <span
                         className="span"
-                        onMouseOver={ () => textOnMouseOver('programs') } 
-                        onMouseOut={ () => textOnMouseOut('programs') }
+                        onMouseOver={() => textOnMouseOver('programs')}
+                        onMouseOut={() => textOnMouseOut('programs')}
                       >Programs</span>
                     </>
                 }
@@ -110,8 +110,8 @@ export default function Header() {
                       </svg>
                       <span
                         className="span"
-                        onMouseOver={ () => textOnMouseOver('admissions') } 
-                        onMouseOut={ () => textOnMouseOut('admissions') }
+                        onMouseOver={() => textOnMouseOver('admissions')}
+                        onMouseOut={() => textOnMouseOut('admissions')}
                       >Admissions</span>
                     </>
                 }
@@ -129,8 +129,8 @@ export default function Header() {
                       </svg>
                       <span
                         className="span"
-                        onMouseOver={ () => textOnMouseOver('parents') } 
-                        onMouseOut={ () => textOnMouseOut('parents') }
+                        onMouseOver={() => textOnMouseOver('parents')}
+                        onMouseOut={() => textOnMouseOut('parents')}
                       >Parents</span>
                     </>
                 }
@@ -148,8 +148,8 @@ export default function Header() {
                       </svg>
                       <span
                         className="span"
-                        onMouseOver={ () => textOnMouseOver('location') } 
-                        onMouseOut={ () => textOnMouseOut('location') }
+                        onMouseOver={() => textOnMouseOver('location')}
+                        onMouseOut={() => textOnMouseOut('location')}
                       >Location</span>
                     </>
                 }
@@ -159,8 +159,10 @@ export default function Header() {
           <svg className="menuSVG" onClick={toggleMobileMenu} xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg>
         </div>
         <div className="header-end">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12Z" /></svg>
-          <a className='link' href="tel:+1 541-754-3010​">+1 541-754-3010​</a>
+          <div className="phone">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12Z" /></svg>
+            <a className='link' href="tel:+1 541-754-3010​">+1 541-754-3010​</a>
+          </div>
           <Button
             text="Book a Visit"
             link="#"

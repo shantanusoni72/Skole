@@ -39,8 +39,8 @@
     font-family: var(--ff-secondary);
     color: var(--blue);
     text-align: start;
-    /* animation: AgeHeadingEntryAnimation 2s;
-    animation-timeline: scroll(root block); */
+    animation: headingEntryAnimation 2s;
+    animation-timeline: scroll(root block);
 }
 
 .age-row-2 {
@@ -198,23 +198,26 @@
 @media screen and (max-width: 768px) {
     .age-container {
         background-size: 40%;
+        gap: 7px
     }
 
     .age-row-1 {
-        padding-inline: 7vw;
+        padding-inline: 5vw;
     }
     
     .age-row-1 h1 {
-        font-size: calc(var(--h1) + 70px);
+        font-size: calc(var(--h1) + 100px);
+        animation: none;
     }
     
     .age-row-2 {
         justify-content: start;
         padding-inline: 5vw;
+        padding-bottom: 3vh;
     }
     
     .age-row-2 h1 {
-        font-size: calc(var(--h1) + 10px);
+        font-size: calc(var(--h1) + 2px);
     }
     
     .age-row-3 {
@@ -222,7 +225,7 @@
     }
     
     .age-card {
-        width: 40%;
+        width: 42%;
         border-radius: 40px;
         padding: 20px;
         padding-block: 20px;
@@ -231,11 +234,7 @@
 
 @media screen and (max-width: 440px) {
     .age-row-1 {
-        padding-inline: 10vw;
-    }
-    
-    .age-row-1 h1 {
-        animation: none;
+        padding-inline: 7vw;
     }
 
     .age-row-2 {
@@ -243,11 +242,25 @@
     }
     
     .age-row-2 h1 {
-        font-size: calc(var(--h1) + 7px);
-        line-height: 45px;
+        font-size: calc(var(--h1) + 2px);
+        line-height: 30px;
+    }
+
+    .age-row-3 {
+        gap: 30px;
     }
     
     .age-card {
-        width: 80%;
+        width: 65%;
+    }
+
+    .age-row-1 h1 {
+        font-size: calc(var(--h1) + 50px);
+        animation: none;
+    }
+
+    .age-container {
+        background-position: right top;
+        background-size: 35%;
     }
 }

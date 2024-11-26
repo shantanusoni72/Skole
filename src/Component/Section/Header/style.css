@@ -158,6 +158,12 @@
     color: var(--blue-green);
 }
 
+.phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .link {
     text-decoration: none;
     color: var(--blue-green);
@@ -254,5 +260,12 @@
 
     .mobile-menu {
         margin-top: 120px;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
     }
 }

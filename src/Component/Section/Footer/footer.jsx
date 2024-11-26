@@ -4,17 +4,22 @@ import tree_1_svg from '../../../assets/tree-1.svg';
 import tree_2_svg from '../../../assets/tree-2.svg';
 import foxy_svg from '../../../assets/fox-color.svg';
 import Button from '../../Util/Button/button';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 export default function Footer() {
   return (
     <div className='footer'>
       <div className="footer-row-1">
         <div className="footer-row-1-col-1">
-          <img className="tree-1" src={tree_1_svg} alt="" />
-          <img className="foxy" src={foxy_svg} alt="" />
+          <ScrollAnimation animateIn="bounceInLeft">
+            <img className="tree-1" src={tree_1_svg} alt="" />
+            <img className="foxy" src={foxy_svg} alt="" />
+          </ScrollAnimation>
         </div>
         <div className="footer-row-1-col-2">
-          <img className="tree-1" src={tree_2_svg} alt="" />
+          <ScrollAnimation animateIn="bounceInRight">
+            <img className="tree-1" src={tree_2_svg} alt="" />
+          </ScrollAnimation>
         </div>
       </div>
       <div className="footer-row-inner">

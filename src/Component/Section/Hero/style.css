@@ -45,7 +45,7 @@
     max-height: 350px;
     position: absolute;
     animation: SplashingAnimation 0.8s;
-    z-index: 5;
+    z-index: 1;
 }
 
 .dots.scrolled {
@@ -197,6 +197,7 @@
 @media screen and (max-width: 440px) {
     .hero {
         width: 100%;
+        height: 300px;
         padding-inline: 50px;
         padding-top: 250px;
         padding-bottom: 0px;
@@ -221,7 +222,8 @@
         gap: 10px;
         justify-content: end;
         align-items: center;
-        padding-top: 20px;
+        padding-top: 60px;
+        padding-inline: 50px;
         padding-bottom: 0px;
     }
 
@@ -247,8 +249,8 @@
     .hero-people {
         width: 30%;
         padding-block: 0px;
-        background-image: url('../../../assets/people-button.webp');
-        background-size: cover;
+        background-image: none;
+        /* background-size: cover; */
         display: flex;
         flex-direction: column;
         justify-content: center;

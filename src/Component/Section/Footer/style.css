@@ -51,14 +51,15 @@
 .tree-1 {
     transform: rotate(0deg);
     perspective: 120px;
-    animation: topDownAnimation 0.4s ease-in;
+    /* animation: topDownAnimation 0.4s ease-in; */
 }
 
 .foxy {
     width: 70%;
     transform: rotate(0deg);
     perspective: 120px;
-    animation: topDownAnimation 0.4s ease-in;
+    /* animation: topDownAnimation 0.4s ease-in; */
+    /* animation-timeline: scroll(root block); */
 }
 
 .footer-row-2 {

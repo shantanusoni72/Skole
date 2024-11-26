@@ -1,6 +1,6 @@
 @keyframes testimonialEntryAnimation {
     from {
-        transform: translateX(200px) scale(1.2);
+        transform: translateX(100px) scale(1.2);
     }
     to {
         transform: translateX(0px) scale(1);
@@ -104,6 +104,12 @@
     .slide {
         height: 180px;
     }
+
+    .slide p {
+        font-size: calc(var(--h2) - 4px);
+        font-weight: var(--fw);
+        color: var(--white);
+    }
 }
 
 @media screen and (max-width: 440px) {
@@ -128,5 +134,16 @@
 
     .slide {
         height: 220px;
+    }
+
+    .testimonial-col-2 h2 {
+        font-size: calc(var(--h1) + 2px);
+        line-height: 30px;
+    }
+
+    .testimonial-col-2 p {
+        font-size: calc(var(--h4) + 1px);
+        color: var(--grey-dark);
+        line-height: 25px;
     }
 }

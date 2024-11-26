@@ -1,3 +1,23 @@
+@keyframes TitleWalkingAnimation {
+    from {
+        transform: translateX(-900px);
+    }
+
+    to {
+        transform: translateX(400px);
+    }
+}
+
+@keyframes SnailWalkingAnimation {
+    from {
+        transform: translateX(800px);
+    }
+
+    to {
+        transform: translateX(-300px);
+    }
+}
+
 .schedule {
     padding-block: 50px;
     display: flex;
@@ -11,7 +31,7 @@
     color: var(--blue);
     font-family: var(--ff-secondary);
     margin-inline: 100px;
-    animation: headingEntryAnimation 2s;
+    animation: TitleWalkingAnimation 2s;
     animation-timeline: scroll(root block);
 }
 
@@ -23,10 +43,11 @@
 
 @keyframes manWalikingAnimation {
     from {
-        transform: translateX(-200px);
+        transform: translateX(-400px);
     }
+
     to {
-        transform: translateX(0px);
+        transform: translateX(150px);
     }
 }
 
@@ -63,23 +84,69 @@
 
 .schedule-row-3 {
     width: 85%;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: start;
-    padding-inline: 50px;
+    padding-inline: 30px;
     background-image: url('../../../assets/path.svg');
-    background-size: cover;
-    background-position: bottom bottom;
-    margin: auto;
+    background-size: auto;
+    margin-inline: auto;
+    margin-top: -70px;
+}
+
+.schedule-row-3>* {
+    margin-top: -80px;
 }
 
 .schedule-row-3-col {
     display: flex;
     justify-content: space-between;
+    gap: 30px;
+    padding-left: 50px;
+}
+
+.schedule-row-3-col-2 img {
+    animation: rotateInDownRight 0.4s;
+    padding-right: 50px;
+    margin-top: 15px;
+}
+
+@keyframes rotateInDownLeft {
+    from {
+        transform-origin: left bottom;
+        transform: rotate3d(0, 0, 1, -45deg);
+        opacity: 0;
+    }
+
+    to {
+        transform-origin: left bottom;
+        transform: none;
+        opacity: 1;
+    }
 }
 
 .leaf_2 {
     width: 50%;
+    animation: rotateInDownLeft 0.4s;
+}
+
+@keyframes rotateInDownRight {
+    0% {
+        transform-origin: right bottom;
+        transform: rotate3d(0, 0, 1, 45deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform-origin: right bottom;
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.leaf_1 {
+    animation:  0.4s ease-in;
 }
 
 .schedule-row-4 {
@@ -111,43 +178,62 @@
 
 .snail {
     width: 30%;
-    animation: headingEntryAnimation 2s;
+    animation: SnailWalkingAnimation 2s;
     animation-timeline: scroll(root block);
-}      
+}
 
 @media screen and (max-width: 1024px) {
     .snail {
         width: 50%;
         margin: auto;
-    }        
+    }
 }
 
 @media screen and (max-width: 768px) {
     .schedule-row-1 h1 {
         font-size: calc(var(--h1) + 100px);
         margin-inline: 50px;
+        animation: none;
     }
-    
+
     .schedule-row-2 {
         padding-inline: 40px;
+        gap: 70px;
     }
-    
+
+    .schedule-row-2 img {
+        width: 40%;
+        animation: none;
+    }
+
     .schedule-row-2-col-2 {
         width: 80%;
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
-    
+
     .schedule-row-2-col-2 h1 {
         font-size: calc(var(--h1) + 5px);
         line-height: 40px;
     }
-    
+
+    .schedule-row-2-col-2 p {
+        font-size: calc(var(--h4) + 1px);
+        line-height: 23px;
+        color: var(--grey-dark);
+    }
+
     .schedule-row-4 {
-        padding-inline: 40px;
-        gap: 40px;
+        padding-inline: 20px;
+        gap: 15px;
+        column-gap: 230px;
         justify-content: start;
+        flex-wrap: wrap;
+    }
+
+    .schedule-row-4 h2 {
+        font-size: var(--h3);
     }
 
     .button-group {
@@ -159,39 +245,115 @@
     .animated {
         text-align: center;
     }
-    
+
     .snail {
         width: 50%;
         margin: auto;
+    }
+
+    .schedule-row-3 {
+        margin-top: -40px;
+    }
+
+    .schedule-row-3>* {
+        margin-top: -70px;
+    }
+
+    .schedule-row-3-col {
+        padding-left: 30px;
+    }
+
+    .schedule-row-3-col-2 img {
+        margin-top: -50px;
+        margin-right: -50px;
+    }
+
+    .snail {
+        animation: none;
     }
 }
 
 @media screen and (max-width: 440px) {
     .schedule-row-1 h1 {
         font-size: calc(var(--h1) + 50px);
-        animation: none;
+        margin-inline: 20px;
     }
-    
+
     .schedule-row-2 {
-        align-items: center;
+        padding-inline: 20px;
         flex-direction: column-reverse;
-        padding-inline: 25px;
-        gap: 30px;
     }
 
     .schedule-row-2 img {
-        width: 60%;
+        width: 40%;
         animation: none;
     }
-    
+
     .schedule-row-2-col-2 {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .schedule-row-2-col-2 h1 {
+        font-size: calc(var(--h1) + 4px);
+        line-height: 40px;
+    }
+
+    .schedule-row-2-col-2 p {
+        font-size: calc(var(--h4) + 1px);
+        line-height: 23px;
+        color: var(--grey-dark);
     }
 
     .schedule-row-4 {
-        display: flex;
+        padding-inline: 20px;
+        gap: 10px;
+        column-gap: 0px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .schedule-row-4 h2 {
+        font-size: calc(var(--h4) + 1px);
+    }
+
+    .button-group {
         flex-direction: column;
-        gap: 20px;
+        gap: 5px;
+        align-items: start;
+    }
+
+    .animated {
         text-align: center;
+    }
+
+    .snail {
+        width: 70%;
+        margin: auto;
+    }
+
+    .schedule-row-3 {
+        width: 70%;
+        justify-content: center;
+        margin-top: -40px;
+    }
+
+    .schedule-row-3>* {
+        margin-top: -70px;
+    }
+
+    .schedule-row-3-col {
+        padding-left: 30px;
+    }
+
+    .schedule-row-3-col-2 img {
+        margin-top: -50px;
+        margin-right: -50px;
+    }
+
+    .snail {
+        animation: none;
     }
 }
