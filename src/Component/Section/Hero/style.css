@@ -53,7 +53,6 @@
     position: absolute;
     top: 50%;
     transition: 0.2s;
-    /* transform: translateY(-100px); */
     animation: dotsOnScroll;
     animation-timeline: scroll(root block);
     z-index: 1;
@@ -92,12 +91,12 @@
 }
 
 .bird {
-    width: 110px;
+    width: 100px;
     animation: openUpTextAnimation 0.8s;
 }
 
 .hero-box h2 {
-    font-size: calc(var(--h1) + 20px);
+    font-size: calc(var(--h1) + 15px);
     font-weight: calc(var(--fw) + 100);
     color: var(--blue);
     text-align: center;
@@ -129,16 +128,18 @@
 @media screen and (max-width: 1024px) {
     .hero {
         padding-inline: 10px;
+        height: 520px;
         padding-top: 200px;
         align-items: start;
+        background-position: bottom;
     }
     
     .hero-box {
-        width: 90%;
+        width: 100%;
     }
 
     .hero-people {
-        width: 40%;
+        width: 39%;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -147,19 +148,30 @@
 
 @media screen and (max-width: 992px) {
     .hero {
-        mask: none;
+        height: 450px;
     }
-    
+
     .horizontal-waves {
         display: none;
     }
 
     .hero-box {
-        padding-bottom: 0px;
+        padding-bottom: 20px;
     }
 
     .hero-people {
+        width: 42%;
+        height: 90px;
         padding-block: 40px;
+    }
+
+    .hero-box h2 {
+        font-size: calc(var(--h1) + 5px);
+        line-height: 45px;
+    }
+    
+    .hero-box span {
+        font-size: calc(var(--h1) + 25px);
     }
 }
 
@@ -171,23 +183,38 @@
     
     .hero {
         width: 100%;
+        height: 420px;
         align-items: center;
         padding-bottom: 0px;
-        mask: none;
+        /* mask: none; */
     }
     
     .hero-box {
-        width: 100%;
+        width: 70%;
+        height: 420px;
+        padding: 50px;
+        padding-top: 70px;
         padding-bottom: 0px;
+        margin-bottom: -15px;
     }
     
     .hero-box h2 {
-        font-size: calc(var(--h1) + 20px);
+        font-size: calc(var(--h1) + 5px);
         font-weight: calc(var(--fw) + 100);
+        line-height: 45px;
+    }
+
+    .hero-box span {
+        font-size: calc(var(--h1) + 25px);
+    }
+
+    .bird {
+        width: 10%;
     }
 
     .hero-people {
-        width: 50%;
+        width: 70%;
+        height: 100px;
         padding-block: 70px;
         justify-content: center;
         align-items: center;
@@ -197,14 +224,13 @@
 @media screen and (max-width: 440px) {
     .hero {
         width: 100%;
-        height: 300px;
+        height: 350px;
         padding-inline: 50px;
         padding-top: 250px;
         padding-bottom: 0px;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
-        mask: none;
     }
     
     .dots {
@@ -247,10 +273,9 @@
     }
     
     .hero-people {
-        width: 30%;
+        width: 65%;
+        height: 140px;
         padding-block: 0px;
-        background-image: none;
-        /* background-size: cover; */
         display: flex;
         flex-direction: column;
         justify-content: center;

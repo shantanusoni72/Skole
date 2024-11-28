@@ -1,10 +1,10 @@
 @keyframes TitleWalkingAnimation {
     from {
-        transform: translateX(-900px);
+        transform: translateX(-500px);
     }
 
     to {
-        transform: translateX(400px);
+        transform: translateX(350px);
     }
 }
 
@@ -63,6 +63,13 @@
     gap: 20px;
 }
 
+.schedule-row-3-col .animated {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    padding-left: 30px;
+}
+
 .schedule-row-2-col-2 h1 {
     font-size: calc(var(--h1) + 15px);
     font-weight: calc(var(--fw) + 100);
@@ -88,7 +95,6 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
-    padding-inline: 30px;
     background-image: url('../../../assets/path.svg');
     background-size: auto;
     margin-inline: auto;
@@ -106,9 +112,9 @@
     padding-left: 50px;
 }
 
-.schedule-row-3-col-2 img {
+.schedule-row-3-col-2 .animated img {
     animation: rotateInDownRight 0.4s;
-    padding-right: 50px;
+    padding-right: 30px;
     margin-top: 15px;
 }
 

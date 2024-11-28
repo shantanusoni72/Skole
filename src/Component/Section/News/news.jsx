@@ -19,11 +19,13 @@ export default function News(props) {
           ))
         }
       </div>
-      <Button
+      <div className="news-button">
+        <Button
           text={props.data.button.text}
           link={props.data.button.link}
           type={props.data.button.type}
         />
+      </div>
     </div>
   )
 }

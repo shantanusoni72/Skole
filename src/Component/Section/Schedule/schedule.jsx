@@ -6,6 +6,7 @@ import Snail from '../../../assets/snail.svg';
 import Leaf_1 from '../../../assets/leaf-1.svg';
 import Leaf_2 from '../../../assets/leaf-2.svg';
 import Tree_1 from '../../../assets/illustration-tree-2.svg';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 export default function Schedule(props) {
     return (
@@ -27,11 +28,15 @@ export default function Schedule(props) {
             </div>
             <div className="schedule-row-3">
                 <div className="schedule-row-3-col">
-                    <img className="leaf_2" src={Leaf_2} alt="" />
-                    <img className="leaf_1" src={Leaf_1} alt="" />
+                    <ScrollAnimation animateIn="bounceInLeft">
+                        <img className="leaf_2" src={Leaf_2} alt="" />
+                        <img className="leaf_1" src={Leaf_1} alt="" />
+                    </ScrollAnimation>
                 </div>
                 <div className="schedule-row-3-col-2">
-                    <img src={Tree_1} alt="" />
+                    <ScrollAnimation animateIn="bounceInRight">
+                        <img src={Tree_1} alt="" />
+                    </ScrollAnimation>
                 </div>
             </div>
             <div className="schedule-row-4">

@@ -7,11 +7,15 @@
     }
 }
 
+.presentation-button {
+    display: none;
+}
+
 .presentation {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-block: 40px;
+    padding-block: 20px;
 }
 
 .presentation-controller ol {
@@ -64,11 +68,11 @@
 
 .presentation-carousel {
     width: 40vw;
-    transition: 1s;
+    transition: 1.5s;
 }
 
-.presentation-carousel.hidden {
-    display: none;
+.presentation-image img {
+    transform: scale(1.7);   
 }
 
 .presentation-image-inner img {
@@ -81,29 +85,29 @@
     mask: url('../../../assets/slider-image.svg');
 }
 
-.react-multiple-carousel__arrow--left {
+.presentation-slider .react-multiple-carousel__arrow--left {
     background-color: transparent !important;
     position: absolute;
     margin-left: -30px;
 }
 
-.react-multiple-carousel__arrow--left::before {
-    content: "\e825";
+.presentation-slider .react-multiple-carousel__arrow--left::before {
+    content: "\e824";
     color: var(--blue-green) !important;
     font-weight: calc(var(--fw) + 300) !important;
 }
 
-.react-multiple-carousel__arrow--right {
+.presentation-slider .react-multiple-carousel__arrow--right {
     background-color: transparent !important;
 }
 
-.react-multiple-carousel__arrow--right::before {
+.presentation-slider .react-multiple-carousel__arrow--right::before {
     content: "\e825";
     color: var(--blue-green) !important;
     font-weight: calc(var(--fw) + 300) !important;
 }
 
-.react-multiple-carousel__arrow {
+.presentation-slider .react-multiple-carousel__arrow {
     z-index: 10 !important;
 }
 
@@ -131,14 +135,25 @@
 }
 
 @media screen and (max-width: 768px) {
+    .presentation-button {
+        padding-inline: 30px;
+        padding-bottom: 70px;
+        display: block;
+    }
+    
     .presentation-carousel {
         width: 60vw;
     }
 }
 
 @media screen and (max-width: 440px) {
+    .presentation-button {
+        display: none;
+    }
+    
     .presentation {
         flex-direction: column;
+        padding-block: 40px;
     }
 
     .presentation-carousel {

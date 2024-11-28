@@ -46,16 +46,18 @@ export default function Testimonial(props) {
           <img src={props.data.tv_images.bottom} alt="" />
         </div>
         <div className="testimonial-col-2">
-          <h2>{props.data.content.title}</h2>
-          <p>{props.data.content.desc}</p>
-          <Button
-            text={props.data.content.button.text}
-            link={props.data.content.button.link}
-            type={props.data.content.button.type}
-          />
-        </div>
-        <div className="testimonial-col-3">
-          <img src={props.data.side_image} alt="" />
+          <div className="testimonial-col-2-part-1">
+            <h2>{props.data.content.title}</h2>
+            <p>{props.data.content.desc}</p>
+            <Button
+              text={props.data.content.button.text}
+              link={props.data.content.button.link}
+              type={props.data.content.button.type}
+            />
+          </div>
+          <div className="testimonial-col-2-part-2">
+            <img src={props.data.side_image} alt="" />
+          </div>
         </div>
       </div>
     </div>

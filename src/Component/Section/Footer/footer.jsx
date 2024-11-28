@@ -11,13 +11,13 @@ export default function Footer() {
     <div className='footer'>
       <div className="footer-row-1">
         <div className="footer-row-1-col-1">
-          <ScrollAnimation animateIn="bounceInLeft">
+          <ScrollAnimation animateIn="bounce">
             <img className="tree-1" src={tree_1_svg} alt="" />
             <img className="foxy" src={foxy_svg} alt="" />
           </ScrollAnimation>
         </div>
         <div className="footer-row-1-col-2">
-          <ScrollAnimation animateIn="bounceInRight">
+          <ScrollAnimation animateIn="bounce">
             <img className="tree-1" src={tree_2_svg} alt="" />
           </ScrollAnimation>
         </div>

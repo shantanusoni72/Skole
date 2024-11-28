@@ -16,6 +16,15 @@
     }
 }
 
+@keyframes AgeEntryAnimation {
+    from {
+        transform: translateX(-90px) scale(1.3);
+    }
+    to {
+        transform: translateX(200px) scale(1);
+    }
+}
+
 .age-container {
     display: flex;
     flex-direction: column;
@@ -39,7 +48,7 @@
     font-family: var(--ff-secondary);
     color: var(--blue);
     text-align: start;
-    animation: headingEntryAnimation 2s;
+    animation: AgeEntryAnimation 2s;
     animation-timeline: scroll(root block);
 }
 

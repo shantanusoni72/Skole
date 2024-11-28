@@ -1,26 +1,27 @@
 @keyframes dotBouncing {
-	0% {
-		opacity: 0;
-		transform: translateY(-50px);
-	}
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
 
-	50% {
-		transform: translateY(-25px) scale(1.2);
-	}
+    50% {
+        transform: translateY(-25px) scale(1.2);
+    }
 
-	75% {
-		transform: translateY(-30px) scale(1);
-	}
+    75% {
+        transform: translateY(-30px) scale(1);
+    }
 
     100% {
-		transform: translateY(-20px);
-	}
+        transform: translateY(-20px);
+    }
 }
 
 @keyframes openMobileMenuAnimation {
     0% {
         transform: scaleY(0);
     }
+
     100% {
         transform: scaleY(1);
     }
@@ -75,7 +76,7 @@
     font-weight: calc(var(--fw) + 100);
 }
 
-#home > svg {
+#home>svg {
     color: var(--orange);
 }
 
@@ -87,7 +88,7 @@
     display: block;
 }
 
-#about > svg {
+#about>svg {
     color: var(--blue);
 }
 
@@ -99,7 +100,7 @@
     display: block;
 }
 
-#programs > svg {
+#programs>svg {
     color: var(--purple);
 }
 
@@ -111,7 +112,7 @@
     display: block;
 }
 
-#admissions > svg {
+#admissions>svg {
     color: var(--green);
 }
 
@@ -123,7 +124,7 @@
     display: block;
 }
 
-#parents > svg {
+#parents>svg {
     color: var(--gold);
 }
 
@@ -135,7 +136,7 @@
     display: block;
 }
 
-#location > svg {
+#location>svg {
     color: var(--blue-light);
 }
 
@@ -222,7 +223,16 @@
 }
 
 @media screen and (max-width: 1200px) {
+    .header {
+        padding-block: 25px;
+        padding-inline: 25px;
+    }
+
     .header-menu {
+        display: none;
+    }
+
+    .horizontal-waves {
         display: none;
     }
 
@@ -235,7 +245,7 @@
     .header {
         padding: 25px;
     }
-    
+
     .header-menu {
         display: none;
     }

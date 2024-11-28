@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './style.css';
 import Carousel from 'react-multi-carousel';
 import Button from '../../Util/Button/button';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 export default function Presentation(props) {
     const [activeSlider, setActiveSlider] = useState(1);
@@ -25,44 +26,50 @@ export default function Presentation(props) {
         }
     };
 
-    return (
+    return (<>
         <div className="presentation">
             <div className="presentation-slider">
-                <Carousel
-                    containerClass={`presentation-carousel ${activeSlider === 1 ? "" : "hidden"}`}
-                    responsive={responsive}
-                    infinite={true}
-                >
-                    <img className='presentation-slide' src={props.data.carousel.first.image_1} alt="" />
-                    <img className='presentation-slide' src={props.data.carousel.first.image_2} alt="" />
-                </Carousel>
-                <Carousel
-                    containerClass={`presentation-carousel ${activeSlider === 2 ? "" : "hidden"}`}
-                    responsive={responsive}
-                    infinite={true}
-                >
-                    <img className='presentation-slide' src={props.data.carousel.second.image_1} alt="" />
-                    <img className='presentation-slide' src={props.data.carousel.second.image_2} alt="" />
-                    <img className='presentation-slide' src={props.data.carousel.second.image_3} alt="" />
-                </Carousel>
-                <Carousel
-                    containerClass={`presentation-carousel ${activeSlider === 3 ? "" : "hidden"}`}
-                    responsive={responsive}
-                    infinite={true}
-                >
-                    <img className='presentation-slide' src={props.data.carousel.third.image_1} alt="" />
-                    <img className='presentation-slide' src={props.data.carousel.third.image_2} alt="" />
-                    <img className='presentation-slide' src={props.data.carousel.third.image_3} alt="" />
-                </Carousel>
-                <Carousel
-                    containerClass={`presentation-carousel ${activeSlider === 4 ? "" : "hidden"}`}
-                    responsive={responsive}
-                    infinite={true}
-                >
-                    <img className='presentation-slide' src={props.data.carousel.fourth.image_1} alt="" />
-                    <img className='presentation-slide' src={props.data.carousel.fourth.image_2} alt="" />
-                    <img className='presentation-slide' src={props.data.carousel.fourth.image_3} alt="" />
-                </Carousel>
+                {
+                    activeSlider === 1 ?
+                        <Carousel
+                            containerClass="presentation-carousel"
+                            responsive={responsive}
+                            infinite={true}
+                        >
+                            <img className='presentation-slide' src={props.data.carousel.first.image_1} alt="" />
+                            <img className='presentation-slide' src={props.data.carousel.first.image_2} alt="" />
+                        </Carousel>
+                        : activeSlider === 2 ?
+                            <Carousel
+                                containerClass="presentation-carousel"
+                                responsive={responsive}
+                                infinite={true}
+                            >
+                                <img className='presentation-slide' src={props.data.carousel.second.image_1} alt="" />
+                                <img className='presentation-slide' src={props.data.carousel.second.image_2} alt="" />
+                                <img className='presentation-slide' src={props.data.carousel.second.image_3} alt="" />
+                            </Carousel>
+                            : activeSlider === 3 ?
+                                <Carousel
+                                    containerClass="presentation-carousel"
+                                    responsive={responsive}
+                                    infinite={true}
+                                >
+                                    <img className='presentation-slide' src={props.data.carousel.third.image_1} alt="" />
+                                    <img className='presentation-slide' src={props.data.carousel.third.image_2} alt="" />
+                                    <img className='presentation-slide' src={props.data.carousel.third.image_3} alt="" />
+                                </Carousel>
+                                : activeSlider === 4 ?
+                                    <Carousel
+                                        containerClass="presentation-carousel"
+                                        responsive={responsive}
+                                        infinite={true}
+                                    >
+                                        <img className='presentation-slide' src={props.data.carousel.fourth.image_1} alt="" />
+                                        <img className='presentation-slide' src={props.data.carousel.fourth.image_2} alt="" />
+                                        <img className='presentation-slide' src={props.data.carousel.fourth.image_3} alt="" />
+                                    </Carousel> : null
+                }
             </div>
             <div className="presentation-controller">
                 <ol>
@@ -81,8 +88,17 @@ export default function Presentation(props) {
                         type={props.data.action.button.type}
                     />
                 </div>
-                <img src={props.data.action.image_2} alt="" />
+                <ScrollAnimation animateIn="bounce">
+                    <img src={props.data.action.image_2} alt="" />
+                </ScrollAnimation>
             </div>
         </div>
-    )
+        <div className="presentation-button">
+            <Button
+                text={props.data.action.button.text}
+                link={props.data.action.button.link}
+                type={props.data.action.button.type}
+            />
+        </div>
+    </>)
 }
