@@ -35,11 +35,11 @@
     --gold-light: #FFEFDF;
     --gold-lighter: #F4F1EA;
     --white: #FFFFFF;
-    --black: #000000;
+    --black: #333333;
     --grey-dark: #333333;
     --grey: #6b6b6b;
     --greyer: #EDEDED;
-    --grey-light: #EDEDED;
+    --grey-light: #fdfdfd;
     --mask:
         radial-gradient(39.6px at 50% calc(100% - 56px), #000 99%, #0000 101%) calc(50% - 56px) 0/112px 100%,
         radial-gradient(39.6px at 50% calc(100% + 28px), #0000 99%, #000 101%) 50% calc(100% - 28px)/112px 100% repeat-x;

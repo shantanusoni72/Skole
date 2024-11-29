@@ -43,7 +43,7 @@
     align-items: center;
     padding-block: 15px;
     padding-inline: 25px;
-    background-color: var(--white);
+    background-color: var(--grey-light);
 }
 
 .header-start {
@@ -125,7 +125,7 @@
 }
 
 #parents>svg {
-    color: var(--gold);
+    color: var(--gold-light);
 }
 
 #parents .svg {
@@ -197,6 +197,8 @@
     background-color: var(--white);
     animation: openMobileMenuAnimation 0.4s;
     transform-origin: top;
+    z-index: 10;
+    background-color: var(--white);
 }
 
 .mobile-menu.hidden {
@@ -269,7 +271,7 @@
     }
 
     .mobile-menu {
-        margin-top: 120px;
+        margin-top: 70px;
     }
 
     .header {

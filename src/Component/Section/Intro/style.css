@@ -26,7 +26,6 @@
     font-family: var(--ff-secondary);
     color: var(--blue);
     letter-spacing: 10px;
-    /* animation: entryAnimation 0.4s; */
 }
 
 .intro-col-2 {
@@ -45,8 +44,10 @@
 }
 
 .intro-col-2 p {
+    width: 90%;
     font-size: calc(var(--h3) - 0px);
-    font-weight: calc(var(--fw) - 400);
+    font-weight: calc(var(--fw) - 300);
+    line-height: 27px;
     color: var(--black);
 }
 

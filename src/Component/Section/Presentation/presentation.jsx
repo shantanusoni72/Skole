@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 import Carousel from 'react-multi-carousel';
 import Button from '../../Util/Button/button';
@@ -6,6 +6,30 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 export default function Presentation(props) {
     const [activeSlider, setActiveSlider] = useState(1);
+    const [transform, setTransform] = useState("translateX(0)");
+
+    useEffect(() => {
+        const handleScroll = () => {
+          const scrollPosition =
+            (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 50;
+    
+          const start = 0; // Start percentage
+          const end = 40; // End percentage
+          const translateXSpeed = 100; // Translate distance in px
+    
+          if (scrollPosition >= start && scrollPosition <= end) {
+            const progress = (scrollPosition - start) / (end - start); // Normalize progress
+            setTransform(`translateX(${progress * translateXSpeed}px)`);
+          } else if (scrollPosition < start) {
+            setTransform("translateX(-300px)");
+          } else {
+            setTransform(`translateX(${translateXSpeed}px)`);
+          }
+        };
+    
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll); // Cleanup listener
+      }, []);
 
     const responsive = {
         superLargeDesktop: {
@@ -81,14 +105,14 @@ export default function Presentation(props) {
             </div>
             <div className="presentation-image">
                 <div className="presentation-image-inner">
-                    <img src={props.data.action.image_1} alt="" />
+                    <img style={{ transform, transition: "transform 0.2s ease-out",}} src={props.data.action.image_1} alt="" />
                     <Button
                         text={props.data.action.button.text}
                         link={props.data.action.button.link}
                         type={props.data.action.button.type}
                     />
                 </div>
-                <ScrollAnimation animateIn="bounce">
+                <ScrollAnimation animateIn="fadeInDown" animateOnce={true}>
                     <img src={props.data.action.image_2} alt="" />
                 </ScrollAnimation>
             </div>

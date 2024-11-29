@@ -122,7 +122,7 @@ export default function Header() {
                     <>
                       <svg xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#A79201"><path d="M480.2-240Q380-240 310-309.8q-70-69.8-70-170T309.8-650q69.8-70 170-70T650-650.2q70 69.8 70 170T650.2-310q-69.8 70-170 70Z" />
                       </svg>
-                      <span style={{ color: 'var(--gold)' }}>Parents</span>
+                      <span style={{ color: '#A79201' }}>Parents</span>
                     </> :
                     <>
                       <svg className="svg" xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#A79201"><path d="M480.2-240Q380-240 310-309.8q-70-69.8-70-170T309.8-650q69.8-70 170-70T650-650.2q70 69.8 70 170T650.2-310q-69.8 70-170 70Z" />

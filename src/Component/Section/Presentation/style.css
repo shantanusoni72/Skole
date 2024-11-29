@@ -7,6 +7,32 @@
     }
 }
 
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes translateXScroll {
+    0% {
+        transform: translateX(0); /* Start at original position */
+    }
+    10% {
+        transform: translateX(0); /* No movement before 10% */
+    }
+    40% {
+        transform: translateX(50px); /* Move 50px horizontally */
+    }
+    100% {
+        transform: translateX(50px); /* Remain at final position */
+    }
+}
+
 .presentation-button {
     display: none;
 }
@@ -15,7 +41,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-block: 20px;
+    padding-top: 10px;
+    padding-block: 80px;
 }
 
 .presentation-controller ol {
@@ -67,8 +94,7 @@
 }
 
 .presentation-carousel {
-    width: 40vw;
-    transition: 1.5s;
+    width: 600px;
 }
 
 .presentation-image img {
@@ -76,8 +102,12 @@
 }
 
 .presentation-image-inner img {
-    animation: MotherEntryAnimation;
-    animation-timeline: scroll(root block);
+    /* animation: MotherEntryAnimation; */
+    animation: translateXScroll 2s ease-in-out;
+    will-change: transform;
+    position: relative;
+    transform: translateX(0);
+    /* animation-timeline: scroll(root block); */
 }
 
 .presentation-slide {
@@ -114,7 +144,6 @@
 .presentation-image {
     display: flex;
     align-items: end;
-    gap: 20px;
 }
 
 .presentation-image-inner {
